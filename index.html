@@ -32,38 +32,64 @@
                     style: {
                         version: 8,
                         sources: {
-                            'example_source': {
-                                type: 'vector',
+                            "protomaps": {
+                                type: "vector",
                                 url: `pmtiles://${PMTILES_URL}`,
-                                attribution: '© <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>'
+                                attribution: '© <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>"'
                             }
                         },
                         layers: [
                             {
-                                'id': 'buildings',
-                                'source': 'example_source',
-                                'source-layer': 'landuse',
-                                'type': 'fill',
-                                'paint': {
-                                    'fill-color': 'steelblue'
+                                "id": "landcover",
+                                "type": "fill",
+                                "source": "protomaps",
+                                "source-layer": "landcover",
+                                "paint": {
+                                    "fill-color": [
+                                        "match",
+                                        [
+                                            "get",
+                                            "kind"
+                                        ],
+                                        "grassland",
+                                        "rgba(210, 239, 207, 1)",
+                                        "barren",
+                                        "rgba(255, 243, 215, 1)",
+                                        "urban_area",
+                                        "rgba(230, 230, 230, 1)",
+                                        "farmland",
+                                        "rgba(216, 239, 210, 1)",
+                                        "glacier",
+                                        "rgba(255, 255, 255, 1)",
+                                        "scrub",
+                                        "rgba(234, 239, 210, 1)",
+                                        "rgba(196, 231, 210, 1)"
+                                    ],
+                                }
+                            },    
+                            {
+                                "id": "buildings",
+                                "type": "fill",
+                                "source": "protomaps",
+                                "source-layer": "buildings",
+                                "filter": [
+                                    "in",
+                                    "kind",
+                                    "building",
+                                    "building_part"
+                                ],
+                                "paint": {
+                                    "fill-color": "red",
+                                    "fill-opacity": 0.5
                                 }
                             },
                             {
-                                'id': 'roads',
-                                'source': 'example_source',
-                                'source-layer': 'roads',
-                                'type': 'line',
-                                'paint': {
-                                    'line-color': 'black'
-                                }
-                            },
-                            {
-                                'id': 'mask',
-                                'source': 'example_source',
-                                'source-layer': 'mask',
-                                'type': 'fill',
-                                'paint': {
-                                    'fill-color': 'white'
+                                "id": "roads",
+                                "source": "protomaps",
+                                "source-layer": "roads",
+                                "type": "line",
+                                "paint": {
+                                    "line-color": "black"
                                 }
                             }
                         ]
