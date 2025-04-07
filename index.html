@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@5.3.0/dist/maplibre-gl.css' crossorigin="anonymous"/>
         <script src="https://unpkg.com/maplibre-gl@5.3.0/dist/maplibre-gl.js" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/pmtiles@3.2.0/dist/pmtiles.js"></script>
+        <script src="https://unpkg.com/pmtiles@4.3.0/dist/pmtiles.js"></script>
         <style>
             body { margin: 0; padding: 0; }
             html, body, #map { height: 100%; }
@@ -19,7 +19,7 @@
             let pm = new pmtiles.Protocol();
             maplibregl.addProtocol("pmtiles",pm.tile);
 
-            let PMTILES_URL = "./muddy_branch.pmtiles";
+            let PMTILES_URL = "./muddy_branch_area.pmtiles";
             const p = new pmtiles.PMTiles(PMTILES_URL);
             pm.add(p);
 
@@ -27,8 +27,8 @@
             p.getHeader().then(h => {
                 const map = new maplibregl.Map({
                     container: 'map',
-                    zoom: 15,
-                    center: [-77.247105,39.093831],
+                    zoom: h.maxZoom - 2,
+                    center: [h.centerLon, h.centerLat],
                     style: {
                         version: 8,
                         sources: {
