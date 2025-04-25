@@ -6,9 +6,9 @@
             "attribution": "<a href=\"https://github.com/protomaps/basemaps\">Protomaps</a> © <a href=\"https://openstreetmap.org\">OpenStreetMap</a>",
             "url": "pmtiles://muddy_branch_area.pmtiles"
        },
-        "muddy_branch_trail": {
+        "muddy_branch_relation": {
             "type": "geojson",
-            "data": "./muddy_branch_trail.geojson"
+            "data": "./muddy_branch_relation.geojson"
         }
     },
     "layers": [
@@ -461,7 +461,7 @@
         {
             "id": "muddy_branch_trail",
             "type": "line",
-            "source": "muddy_branch_trail",
+            "source": "muddy_branch_relation",
             "minzoom": 8,
             "filter": [
                 "==",
@@ -470,7 +470,7 @@
             ],
             "paint": {
                 "line-color": "green",
-                "line-width": 0.5
+                "line-width": 1
             }
         },
         {
