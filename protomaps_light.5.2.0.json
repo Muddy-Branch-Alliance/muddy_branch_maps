@@ -1,19 +1,15 @@
 {
   "version": 8,
   "name": "style@4.3.0 theme@light lang@en",
-  "metadata": {"maputnik:renderer": "mlgljs"},
   "sources": {
     "protomaps": {
       "attribution": "<a href=\"https://github.com/protomaps/basemaps\">Protomaps</a> © <a href=\"https://openstreetmap.org\">OpenStreetMap</a>",
       "type": "vector",
-      "tiles": [
-        "https://api.protomaps.com/tiles/v4/{z}/{x}/{y}.mvt?key=d828297496b11844"
-      ],
-      "maxzoom": 15
+      "url": "pmtiles://muddy_branch_area.pmtiles"
     },
     "muddy_branch_relation": {
       "type": "geojson",
-      "data": "https://mizmay.github.io/muddy_branch_maps/muddy_branch_relation.geojson"
+      "data": "./muddy_branch_relation.geojson"
     }
   },
   "sprite": "https://protomaps.github.io/basemaps-assets/sprites/v4/light",
