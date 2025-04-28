@@ -92,7 +92,7 @@
             ["get", "kind"],
             ["literal", ["national_park", "park", "cemetery", "golf_course"]]
           ],
-          "#a0d9a0",
+          "#b2df8a",
           [
             "in",
             ["get", "kind"],
@@ -100,7 +100,7 @@
           ],
           "#33a02c",
           ["in", ["get", "kind"], ["literal", ["scrub", "grassland", "grass"]]],
-          "#99d2bb",
+          "#b2df8a",
           ["in", ["get", "kind"], ["literal", ["glacier"]]],
           "#e7e7e7",
           ["in", ["get", "kind"], ["literal", ["sand"]]],
@@ -243,7 +243,7 @@
       "type": "fill",
       "source": "muddy_branch_relation",
       "filter": ["all", ["==", "$type", "Polygon"]],
-      "paint": {"fill-color": "#e3e0d4"}
+      "paint": {"fill-color": "red"}
     },
     {
       "id": "water",
