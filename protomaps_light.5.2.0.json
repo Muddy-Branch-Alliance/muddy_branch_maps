@@ -10,6 +10,12 @@
     "muddy_branch_relation": {
       "type": "geojson",
       "data": "./muddy_branch_relation.geojson"
+    },
+    "montgomery_county_dem": {
+      "type": "raster-dem",
+      "encoding":"terrarium",
+      "url": "https://tiles.stadiamaps.com/data/terrarium.json",
+      "tileSize": 256
     }
   },
   "sprite": "https://protomaps.github.io/basemaps-assets/sprites/v4/light",
@@ -29,6 +35,20 @@
       "filter": ["==", "$type", "Polygon"],
       "layout": {"visibility": "none"},
       "paint": {"fill-color": "#e2dfda"}
+    },
+    {
+      "id": "hillshade",
+      "type": "hillshade",
+      "source": "montgomery_county_dem",
+      "paint": {
+          "hillshade-method": "standard",
+          "hillshade-illumination-altitude": 45,
+          "hillshade-illumination-direction": 315,
+          "hillshade-shadow-color": "#000000",
+          "hillshade-highlight-color": "#FFFFFF",
+          "hillshade-accent-color": "#000000",
+          "hillshade-exaggeration": 0.5
+        }
     },
     {
       "id": "landcover",
