@@ -1,0 +1,311 @@
+module.exports.default = (context) => {
+  const baseStyle = {
+    "id": "water_label_ocean",
+    "type": "symbol",
+    "source": "protomaps",
+    "source-layer": "water",
+    "filter": ["in", "kind", "sea", "ocean", "bay", "strait", "fjord"],
+    "layout": {
+      "text-font": ["Noto Sans Italic"],
+      "text-field": [
+        "case",
+        [
+          "all",
+          ["any", ["has", "name"], ["has", "pgf:name"]],
+          ["!", ["any", ["has", "name2"], ["has", "pgf:name2"]]],
+          ["!", ["any", ["has", "name3"], ["has", "pgf:name3"]]]
+        ],
+        [
+          "case",
+          ["has", "script"],
+          [
+            "case",
+            [
+              "any",
+              ["is-supported-script", ["get", "name"]],
+              ["has", "pgf:name"]
+            ],
+            [
+              "format",
+              ["coalesce", ["get", "name:en"], ["get", "name:en"]],
+              {},
+              "\n",
+              {},
+              [
+                "case",
+                [
+                  "all",
+                  ["!", ["has", "name:en"]],
+                  ["has", "name:en"],
+                  ["!", ["has", "script"]]
+                ],
+                "",
+                ["coalesce", ["get", "pgf:name"], ["get", "name"]]
+              ],
+              {
+                "text-font": [
+                  "case",
+                  ["==", ["get", "script"], "Devanagari"],
+                  ["literal", ["Noto Sans Devanagari Regular v1"]],
+                  ["literal", ["Noto Sans Regular"]]
+                ]
+              }
+            ],
+            ["get", "name:en"]
+          ],
+          [
+            "format",
+            [
+              "coalesce",
+              ["get", "name:en"],
+              ["get", "pgf:name"],
+              ["get", "name"]
+            ],
+            {}
+          ]
+        ],
+        [
+          "all",
+          ["any", ["has", "name"], ["has", "pgf:name"]],
+          ["any", ["has", "name2"], ["has", "pgf:name2"]],
+          ["!", ["any", ["has", "name3"], ["has", "pgf:name3"]]]
+        ],
+        [
+          "case",
+          ["all", ["has", "script"], ["has", "script2"]],
+          [
+            "format",
+            ["get", "name:en"],
+            {},
+            "\n",
+            {},
+            ["coalesce", ["get", "pgf:name"], ["get", "name"]],
+            {
+              "text-font": [
+                "case",
+                ["==", ["get", "script"], "Devanagari"],
+                ["literal", ["Noto Sans Devanagari Regular v1"]],
+                ["literal", ["Noto Sans Regular"]]
+              ]
+            },
+            "\n",
+            {},
+            ["coalesce", ["get", "pgf:name2"], ["get", "name2"]],
+            {
+              "text-font": [
+                "case",
+                ["==", ["get", "script2"], "Devanagari"],
+                ["literal", ["Noto Sans Devanagari Regular v1"]],
+                ["literal", ["Noto Sans Regular"]]
+              ]
+            }
+          ],
+          [
+            "case",
+            ["has", "script2"],
+            [
+              "format",
+              [
+                "coalesce",
+                ["get", "name:en"],
+                ["get", "pgf:name"],
+                ["get", "name"]
+              ],
+              {},
+              "\n",
+              {},
+              ["coalesce", ["get", "pgf:name2"], ["get", "name2"]],
+              {
+                "text-font": [
+                  "case",
+                  ["==", ["get", "script2"], "Devanagari"],
+                  ["literal", ["Noto Sans Devanagari Regular v1"]],
+                  ["literal", ["Noto Sans Regular"]]
+                ]
+              }
+            ],
+            [
+              "format",
+              [
+                "coalesce",
+                ["get", "name:en"],
+                ["get", "pgf:name2"],
+                ["get", "name2"]
+              ],
+              {},
+              "\n",
+              {},
+              ["coalesce", ["get", "pgf:name"], ["get", "name"]],
+              {
+                "text-font": [
+                  "case",
+                  ["==", ["get", "script"], "Devanagari"],
+                  ["literal", ["Noto Sans Devanagari Regular v1"]],
+                  ["literal", ["Noto Sans Regular"]]
+                ]
+              }
+            ]
+          ]
+        ],
+        [
+          "case",
+          ["all", ["has", "script"], ["has", "script2"], ["has", "script3"]],
+          [
+            "format",
+            ["get", "name:en"],
+            {},
+            "\n",
+            {},
+            ["coalesce", ["get", "pgf:name"], ["get", "name"]],
+            {
+              "text-font": [
+                "case",
+                ["==", ["get", "script"], "Devanagari"],
+                ["literal", ["Noto Sans Devanagari Regular v1"]],
+                ["literal", ["Noto Sans Regular"]]
+              ]
+            },
+            "\n",
+            {},
+            ["coalesce", ["get", "pgf:name2"], ["get", "name2"]],
+            {
+              "text-font": [
+                "case",
+                ["==", ["get", "script2"], "Devanagari"],
+                ["literal", ["Noto Sans Devanagari Regular v1"]],
+                ["literal", ["Noto Sans Regular"]]
+              ]
+            },
+            "\n",
+            {},
+            ["coalesce", ["get", "pgf:name3"], ["get", "name3"]],
+            {
+              "text-font": [
+                "case",
+                ["==", ["get", "script3"], "Devanagari"],
+                ["literal", ["Noto Sans Devanagari Regular v1"]],
+                ["literal", ["Noto Sans Regular"]]
+              ]
+            }
+          ],
+          [
+            "case",
+            ["!", ["has", "script"]],
+            [
+              "format",
+              [
+                "coalesce",
+                ["get", "name:en"],
+                ["get", "pgf:name"],
+                ["get", "name"]
+              ],
+              {},
+              "\n",
+              {},
+              ["coalesce", ["get", "pgf:name2"], ["get", "name2"]],
+              {
+                "text-font": [
+                  "case",
+                  ["==", ["get", "script2"], "Devanagari"],
+                  ["literal", ["Noto Sans Devanagari Regular v1"]],
+                  ["literal", ["Noto Sans Regular"]]
+                ]
+              },
+              "\n",
+              {},
+              ["coalesce", ["get", "pgf:name3"], ["get", "name3"]],
+              {
+                "text-font": [
+                  "case",
+                  ["==", ["get", "script3"], "Devanagari"],
+                  ["literal", ["Noto Sans Devanagari Regular v1"]],
+                  ["literal", ["Noto Sans Regular"]]
+                ]
+              }
+            ],
+            ["!", ["has", "script2"]],
+            [
+              "format",
+              [
+                "coalesce",
+                ["get", "name:en"],
+                ["get", "pgf:name2"],
+                ["get", "name2"]
+              ],
+              {},
+              "\n",
+              {},
+              ["coalesce", ["get", "pgf:name"], ["get", "name"]],
+              {
+                "text-font": [
+                  "case",
+                  ["==", ["get", "script"], "Devanagari"],
+                  ["literal", ["Noto Sans Devanagari Regular v1"]],
+                  ["literal", ["Noto Sans Regular"]]
+                ]
+              },
+              "\n",
+              {},
+              ["coalesce", ["get", "pgf:name3"], ["get", "name3"]],
+              {
+                "text-font": [
+                  "case",
+                  ["==", ["get", "script3"], "Devanagari"],
+                  ["literal", ["Noto Sans Devanagari Regular v1"]],
+                  ["literal", ["Noto Sans Regular"]]
+                ]
+              }
+            ],
+            [
+              "format",
+              [
+                "coalesce",
+                ["get", "name:en"],
+                ["get", "pgf:name3"],
+                ["get", "name3"]
+              ],
+              {},
+              "\n",
+              {},
+              ["coalesce", ["get", "pgf:name"], ["get", "name"]],
+              {
+                "text-font": [
+                  "case",
+                  ["==", ["get", "script"], "Devanagari"],
+                  ["literal", ["Noto Sans Devanagari Regular v1"]],
+                  ["literal", ["Noto Sans Regular"]]
+                ]
+              },
+              "\n",
+              {},
+              ["coalesce", ["get", "pgf:name2"], ["get", "name2"]],
+              {
+                "text-font": [
+                  "case",
+                  ["==", ["get", "script2"], "Devanagari"],
+                  ["literal", ["Noto Sans Devanagari Regular v1"]],
+                  ["literal", ["Noto Sans Regular"]]
+                ]
+              }
+            ]
+          ]
+        ]
+      ],
+      "text-size": ["interpolate", ["linear"], ["zoom"], 3, 10, 10, 12],
+      "text-letter-spacing": 0.1,
+      "text-max-width": 9,
+      "text-transform": "uppercase"
+    },
+    "paint": {
+      "text-color": "#728dd4",
+      "text-halo-width": 1,
+      "text-halo-color": "#80deea"
+    }
+  };
+  let overrides = {};
+  
+  return {
+    baseStyle,
+    overrides
+  };
+};
