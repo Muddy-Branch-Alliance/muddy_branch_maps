@@ -5,8 +5,7 @@ module.exports.default = (context) => {
     "source": "protomaps",
     "source-layer": "landuse",
     "filter": ["in", "kind", "aerodrome"],
-    "layout": {"visibility": "visible"},
-    "paint": {"fill-color": "#dadbdf"}
+    "paint": {"fill-color": context.colors.chrome }
   };
   let overrides = {};
   

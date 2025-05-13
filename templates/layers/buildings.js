@@ -1,13 +1,20 @@
 module.exports.default = (context) => {
   const baseStyle = {
     "id": "buildings",
-    "type": "fill",
+    "type": "line",
     "source": "protomaps",
     "source-layer": "buildings",
     "paint": {
-      "fill-opacity": 0.5,
-      "fill-outline-color": "#000000",
-      "fill-color": "#ffffff"
+      "line-opacity": context.opacity.half,
+      "line-color": context.colors.black,
+      "line-width": {
+        "base": 0.5,
+        "stops": [
+          [12, 0.25],
+          [14, 0.5],
+          [16, 1]
+        ]
+      }
     }
   };
   let overrides = {};

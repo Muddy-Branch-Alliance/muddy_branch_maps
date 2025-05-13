@@ -22,21 +22,6 @@
   "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "background",
-      "type": "background",
-      "layout": {"visibility": "none"},
-      "paint": {"background-color": "#cccccc"}
-    },
-    {
-      "id": "earth",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "earth",
-      "filter": ["==", "$type", "Polygon"],
-      "layout": {"visibility": "none"},
-      "paint": {"fill-color": "#e2dfda"}
-    },
-    {
       "id": "hillshade",
       "type": "hillshade",
       "source": "montgomery_county_dem",
@@ -48,33 +33,6 @@
         "hillshade-illumination-direction": 315,
         "hillshade-method": "standard",
         "hillshade-shadow-color": "#000000"
-      }
-    },
-    {
-      "id": "landcover",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "landcover",
-      "layout": {"visibility": "none"},
-      "paint": {
-        "fill-color": [
-          "match",
-          ["get", "kind"],
-          "grassland",
-          "rgba(210, 239, 207, 1)",
-          "barren",
-          "rgba(255, 243, 215, 1)",
-          "urban_area",
-          "rgba(230, 230, 230, 1)",
-          "farmland",
-          "rgba(216, 239, 210, 1)",
-          "glacier",
-          "rgba(255, 255, 255, 1)",
-          "scrub",
-          "rgba(234, 239, 210, 1)",
-          "rgba(196, 231, 210, 1)"
-        ],
-        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 5, 1, 7, 0]
       }
     },
     {
@@ -136,76 +94,12 @@
       }
     },
     {
-      "id": "landuse_urban_green",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "landuse",
-      "filter": ["in", "kind", "allotments", "village_green", "playground"],
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "#9cd3b4", "fill-opacity": 0.7}
-    },
-    {
-      "id": "landuse_hospital",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "landuse",
-      "filter": ["==", "kind", "hospital"],
-      "layout": {"visibility": "none"},
-      "paint": {"fill-color": "#e4dad9"}
-    },
-    {
-      "id": "landuse_industrial",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "landuse",
-      "filter": ["==", "kind", "industrial"],
-      "layout": {"visibility": "none"},
-      "paint": {"fill-color": "#d1dde1"}
-    },
-    {
-      "id": "landuse_school-copy",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "landuse",
-      "filter": ["in", "kind", "school", "university", "college"],
-      "layout": {"visibility": "none"},
-      "paint": {"fill-color": "#e4ded7"}
-    },
-    {
-      "id": "landuse_school",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "landuse",
-      "filter": ["in", "kind", "school", "university", "college"],
-      "layout": {"visibility": "none"},
-      "paint": {"fill-color": "#e4ded7"}
-    },
-    {
-      "id": "landuse_beach",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "landuse",
-      "filter": ["in", "kind", "beach"],
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "#e8e4d0"}
-    },
-    {
-      "id": "landuse_zoo",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "landuse",
-      "filter": ["in", "kind", "zoo"],
-      "layout": {"visibility": "none"},
-      "paint": {"fill-color": "#c6dcdc"}
-    },
-    {
       "id": "landuse_aerodrome",
       "type": "fill",
       "source": "protomaps",
       "source-layer": "landuse",
       "filter": ["in", "kind", "aerodrome"],
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "#dadbdf"}
+      "paint": {"fill-color": "rgb(218, 219, 223)"}
     },
     {
       "id": "roads_runway",
@@ -597,13 +491,13 @@
     },
     {
       "id": "buildings",
-      "type": "fill",
+      "type": "line",
       "source": "protomaps",
       "source-layer": "buildings",
       "paint": {
-        "fill-color": "#ffffff",
-        "fill-opacity": 0.5,
-        "fill-outline-color": "#000000"
+        "line-color": "rgb(128,128,128)",
+        "line-opacity": 0.5,
+        "line-width": {"base": 0.5, "stops": [[12, 0.25], [14, 0.5], [16, 1]]}
       }
     },
     {
@@ -1082,42 +976,6 @@
           20,
           7
         ]
-      }
-    },
-    {
-      "id": "boundaries_country",
-      "type": "line",
-      "source": "protomaps",
-      "source-layer": "boundaries",
-      "filter": ["<=", "kind_detail", 2],
-      "paint": {
-        "line-color": "#adadad",
-        "line-dasharray": [
-          "step",
-          ["zoom"],
-          ["literal", [2]],
-          4,
-          ["literal", [2, 1]]
-        ],
-        "line-width": 0.7
-      }
-    },
-    {
-      "id": "boundaries",
-      "type": "line",
-      "source": "protomaps",
-      "source-layer": "boundaries",
-      "filter": [">", "kind_detail", 2],
-      "paint": {
-        "line-color": "#adadad",
-        "line-dasharray": [
-          "step",
-          ["zoom"],
-          ["literal", [2]],
-          4,
-          ["literal", [2, 1]]
-        ],
-        "line-width": 0.4
       }
     },
     {
@@ -4327,75 +4185,6 @@
       "paint": {
         "text-color": "#b3b3b3",
         "text-halo-color": "#e0e0e0",
-        "text-halo-width": 1
-      }
-    },
-    {
-      "id": "places_country",
-      "type": "symbol",
-      "source": "protomaps",
-      "source-layer": "places",
-      "filter": ["==", "kind", "country"],
-      "layout": {
-        "icon-padding": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          0,
-          2,
-          14,
-          2,
-          16,
-          20,
-          17,
-          2,
-          22,
-          2
-        ],
-        "symbol-sort-key": ["get", "min_zoom"],
-        "text-field": [
-          "format",
-          ["coalesce", ["get", "name:en"], ["get", "name:en"]],
-          {}
-        ],
-        "text-font": ["Noto Sans Medium"],
-        "text-size": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          2,
-          [
-            "case",
-            ["<", ["get", "population_rank"], 10],
-            8,
-            [">=", ["get", "population_rank"], 10],
-            12,
-            0
-          ],
-          6,
-          [
-            "case",
-            ["<", ["get", "population_rank"], 8],
-            10,
-            [">=", ["get", "population_rank"], 8],
-            18,
-            0
-          ],
-          8,
-          [
-            "case",
-            ["<", ["get", "population_rank"], 7],
-            11,
-            [">=", ["get", "population_rank"], 7],
-            20,
-            0
-          ]
-        ],
-        "text-transform": "uppercase"
-      },
-      "paint": {
-        "text-color": "#a3a3a3",
-        "text-halo-color": "#e2dfda",
         "text-halo-width": 1
       }
     }

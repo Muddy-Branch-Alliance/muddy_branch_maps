@@ -1,7 +1,11 @@
 module.exports.context = {
   colors: {
+    black: 'rgb(128,128,128)',
+    chrome: 'rgb(218, 219, 223)',
   },
-  styleName: 'Muddy_Branch_Greenway_Trail_Map'
+  opacity: {
+    half: 0.5,
+  }
 };
 
 module.exports.template = {
@@ -27,18 +31,8 @@ module.exports.template = {
   "sprite": "https://protomaps.github.io/basemaps-assets/sprites/v4/light",
   "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
   "layers": [
-    "background",
-    "earth",
     "hillshade",
-    "landcover",
     "landuse_park",
-    "landuse_urban_green",
-    "landuse_hospital",
-    "landuse_industrial",
-    "landuse_school-copy",
-    "landuse_school",
-    "landuse_beach",
-    "landuse_zoo",
     "landuse_aerodrome",
     "roads_runway",
     "roads_taxiway",
@@ -76,8 +70,6 @@ module.exports.template = {
     "roads_highway",
     "roads_rail",
     "muddy-branch-trail",
-    "boundaries_country",
-    "boundaries",
     "roads_bridges_other_casing",
     "roads_bridges_link_casing",
     "roads_bridges_minor_casing",
@@ -96,8 +88,7 @@ module.exports.template = {
     "pois",
     "places_subplace",
     "places_locality",
-    "places_region",
-    "places_country"
+    "places_region"
   ],
   "id": "h7f7a74"
 };
