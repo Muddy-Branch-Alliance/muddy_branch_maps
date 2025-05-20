@@ -15,11 +15,11 @@ module.exports.template = {
     "protomaps": {
       "attribution": "<a href=\"https://github.com/protomaps/basemaps\">Protomaps</a> © <a href=\"https://openstreetmap.org\">OpenStreetMap</a>",
       "type": "vector",
-      "url": "pmtiles://muddy_branch_area.pmtiles"
+      "url": "pmtiles://assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_area.pmtiles"
     },
     "muddy_branch_relation": {
       "type": "geojson",
-      "data": "./muddy_branch_relation.geojson"
+      "data": "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_relation.geojson"
     },
     "montgomery_county_dem": {
       "type": "raster-dem",
