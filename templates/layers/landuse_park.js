@@ -24,36 +24,31 @@ module.exports.default = (context) => {
       "naval_base",
       "airfield"
     ],
-    "layout": {"visibility": "visible"},
     "paint": {
-      "fill-opacity": ["interpolate", ["linear"], ["zoom"], 6, 0, 11, 1],
+      "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.5, 16, 0.8],
       "fill-color": [
         "case",
         [
           "in",
           ["get", "kind"],
-          ["literal", ["national_park", "park", "cemetery", "golf_course"]]
+          ["literal", ["park", "cemetery", "golf_course"]]
         ],
-        "#b2df8a",
+        context.colors.green_light,
         [
           "in",
           ["get", "kind"],
-          ["literal", ["wood", "nature_reserve", "forest", "protected_area"]]
+          ["literal", ["wood", "forest","nature_reserve","protected_area","scrub"]]
         ],
-        "#33a02c",
-        ["in", ["get", "kind"], ["literal", ["scrub", "grassland", "grass"]]],
-        "#b2df8a",
-        ["in", ["get", "kind"], ["literal", ["glacier"]]],
-        "#e7e7e7",
-        ["in", ["get", "kind"], ["literal", ["sand"]]],
-        "#e2e0d7",
+        context.colors.green_bright,
+        ["in", ["get", "kind"], ["literal", ["grass","national_park","grassland"]]],
+        context.colors.green_lightest,
         [
           "in",
           ["get", "kind"],
           ["literal", ["military", "naval_base", "airfield"]]
         ],
-        "#c6dcdc",
-        "#e2dfda"
+        context.colors.chrome,
+        context.colors.tan
       ]
     }
   };

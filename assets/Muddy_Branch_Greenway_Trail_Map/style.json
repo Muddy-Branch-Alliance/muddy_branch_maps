@@ -22,6 +22,11 @@
   "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
+      "id": "background",
+      "type": "background",
+      "paint": {"background-color": "rgb(250, 252, 251)"}
+    },
+    {
       "id": "hillshade",
       "type": "hillshade",
       "source": "montgomery_county_dem",
@@ -60,37 +65,39 @@
         "naval_base",
         "airfield"
       ],
-      "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": [
           "case",
           [
             "in",
             ["get", "kind"],
-            ["literal", ["national_park", "park", "cemetery", "golf_course"]]
+            ["literal", ["park", "cemetery", "golf_course"]]
           ],
-          "#b2df8a",
+          "rgb(178, 223, 138)",
           [
             "in",
             ["get", "kind"],
-            ["literal", ["wood", "nature_reserve", "forest", "protected_area"]]
+            [
+              "literal",
+              ["wood", "forest", "nature_reserve", "protected_area", "scrub"]
+            ]
           ],
-          "#33a02c",
-          ["in", ["get", "kind"], ["literal", ["scrub", "grassland", "grass"]]],
-          "#b2df8a",
-          ["in", ["get", "kind"], ["literal", ["glacier"]]],
-          "#e7e7e7",
-          ["in", ["get", "kind"], ["literal", ["sand"]]],
-          "#e2e0d7",
+          "rgb(51, 160, 44)",
+          [
+            "in",
+            ["get", "kind"],
+            ["literal", ["grass", "national_park", "grassland"]]
+          ],
+          "rgb(178, 223, 138)",
           [
             "in",
             ["get", "kind"],
             ["literal", ["military", "naval_base", "airfield"]]
           ],
-          "#c6dcdc",
-          "#e2dfda"
+          "rgb(218, 219, 223)",
+          "rgb(226, 223, 218)"
         ],
-        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 6, 0, 11, 1]
+        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.5, 16, 0.8]
       }
     },
     {

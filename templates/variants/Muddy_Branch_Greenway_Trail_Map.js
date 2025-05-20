@@ -2,6 +2,13 @@ module.exports.context = {
   colors: {
     black: 'rgb(128,128,128)',
     chrome: 'rgb(218, 219, 223)',
+    tan: 'rgb(226, 223, 218)',
+    ground: 'rgb(250, 252, 251)',
+    white: 'rgb(255, 255, 255)',
+    green_light: 'rgb(178, 223, 138)',
+    green_bright: 'rgb(51, 160, 44)',
+    green_lightest: 'rgb(178, 223, 138)',
+    green_darkest: 'rgb(0, 100, 0)',
   },
   opacity: {
     half: 0.5,
@@ -31,6 +38,7 @@ module.exports.template = {
   "sprite": "https://protomaps.github.io/basemaps-assets/sprites/v4/light",
   "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
   "layers": [
+    "background",
     "hillshade",
     "landuse_park",
     "landuse_aerodrome",
