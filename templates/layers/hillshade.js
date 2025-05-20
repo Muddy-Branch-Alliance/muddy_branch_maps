@@ -4,10 +4,10 @@ module.exports.default = (context) => {
     "type": "hillshade",
     "source": "montgomery_county_dem",
     "paint": {
-      "hillshade-method": "standard",
+      "hillshade-method": "igor",
       "hillshade-illumination-altitude": 45,
       "hillshade-illumination-direction": 315,
-      "hillshade-shadow-color": "#000000",
+      "hillshade-shadow-color": "#808080",
       "hillshade-highlight-color": "#FFFFFF",
       "hillshade-accent-color": "#000000",
       "hillshade-exaggeration": 0.5

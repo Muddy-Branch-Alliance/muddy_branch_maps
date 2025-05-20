@@ -31,8 +31,8 @@
         "hillshade-highlight-color": "#FFFFFF",
         "hillshade-illumination-altitude": 45,
         "hillshade-illumination-direction": 315,
-        "hillshade-method": "standard",
-        "hillshade-shadow-color": "#000000"
+        "hillshade-method": "igor",
+        "hillshade-shadow-color": "#808080"
       }
     },
     {
