@@ -28,17 +28,19 @@
             const p = new pmtiles.PMTiles(PMTILES_URL);
             pm.add(p);
 
-            // we first fetch the header so we can get the center lon, lat of the map.
             p.getHeader().then(h => {
                 const map = new maplibregl.Map({
                     container: 'map',
-                    zoom: 12,
+                    zoom: 11.5,
                     center: [h.centerLon, h.centerLat],
+                    maxBounds: h.bounds,
                     style: "./assets/Muddy_Branch_Greenway_Trail_Map/style.json",
+                    attributionControl: false,
                 });
                 map.setMaxZoom(16);
-                map.setMinZoom(11);
+                map.setMinZoom(10);
 
+                map.addControl(new maplibregl.AttributionControl({compact: true}));
                 map.addControl(new maplibregl.NavigationControl(), 'top-right');
             });
         </script>
