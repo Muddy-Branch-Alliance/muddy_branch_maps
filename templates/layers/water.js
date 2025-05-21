@@ -5,7 +5,7 @@ module.exports.default = (context) => {
     "source": "protomaps",
     "source-layer": "water",
     "filter": ["==", "$type", "Polygon"],
-    "paint": {"fill-color": "#80deea"}
+    "paint": {"fill-color": [ "interpolate", ["exponential", 0.5], ["zoom"], 10, context.colors.water_dark, 14, context.colors.water_light ], }
   };
   let overrides = {};
   

@@ -4,9 +4,8 @@ module.exports.default = (context) => {
     "type": "line",
     "source": "protomaps",
     "source-layer": "water",
-    "minzoom": 14,
     "filter": ["in", "kind", "stream"],
-    "paint": {"line-color": "#80deea", "line-width": 0.5}
+    "paint": {"line-color": context.colors.water_light }
   };
   let overrides = {};
   

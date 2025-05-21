@@ -24,7 +24,17 @@
     {
       "id": "background",
       "type": "background",
-      "paint": {"background-color": "rgb(250, 252, 251)"}
+      "paint": {
+        "background-color": [
+          "interpolate",
+          ["exponential", 0.5],
+          ["zoom"],
+          10,
+          "rgb(226, 223, 218)",
+          14,
+          "rgb(250, 252, 251)"
+        ]
+      }
     },
     {
       "id": "hillshade",
@@ -172,16 +182,25 @@
       "source": "protomaps",
       "source-layer": "water",
       "filter": ["==", "$type", "Polygon"],
-      "paint": {"fill-color": "#80deea"}
+      "paint": {
+        "fill-color": [
+          "interpolate",
+          ["exponential", 0.5],
+          ["zoom"],
+          10,
+          "rgb(89, 132, 151)",
+          14,
+          "rgb(148, 220, 251)"
+        ]
+      }
     },
     {
       "id": "water_stream",
       "type": "line",
       "source": "protomaps",
       "source-layer": "water",
-      "minzoom": 14,
       "filter": ["in", "kind", "stream"],
-      "paint": {"line-color": "#80deea", "line-width": 0.5}
+      "paint": {"line-color": "rgb(148, 220, 251)"}
     },
     {
       "id": "water_river",
@@ -191,14 +210,20 @@
       "minzoom": 9,
       "filter": ["in", "kind", "river"],
       "paint": {
-        "line-color": "#80deea",
+        "line-color": [
+          "interpolate",
+          ["exponential", 0.5],
+          ["zoom"],
+          10,
+          "rgb(89, 132, 151)",
+          14,
+          "rgb(148, 220, 251)"
+        ],
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
           ["zoom"],
-          9,
-          0,
-          9.5,
+          10,
           1,
           18,
           12
