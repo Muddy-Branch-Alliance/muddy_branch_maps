@@ -29,7 +29,7 @@
           "interpolate",
           ["exponential", 0.5],
           ["zoom"],
-          10,
+          9,
           "rgb(226, 223, 218)",
           14,
           "rgb(250, 252, 251)"
