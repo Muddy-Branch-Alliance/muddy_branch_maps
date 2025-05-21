@@ -25,7 +25,7 @@ module.exports.default = (context) => {
       "airfield"
     ],
     "paint": {
-      "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.5, 16, 0.8],
+      "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.1, 16, 0.5],
       "fill-color": [
         "case",
         [
@@ -33,22 +33,22 @@ module.exports.default = (context) => {
           ["get", "kind"],
           ["literal", ["park", "cemetery", "golf_course"]]
         ],
-        context.colors.green_light,
+        context.colors.irrigated,
         [
           "in",
           ["get", "kind"],
           ["literal", ["wood", "forest","nature_reserve","protected_area","scrub"]]
         ],
-        context.colors.green_bright,
+        context.colors.forest,
         ["in", ["get", "kind"], ["literal", ["grass","national_park","grassland"]]],
-        context.colors.green_lightest,
+        context.colors.other_vegetation,
         [
           "in",
           ["get", "kind"],
           ["literal", ["military", "naval_base", "airfield"]]
         ],
         context.colors.chrome,
-        context.colors.background
+        context.colors.ground_dark
       ]
     }
   };

@@ -29,7 +29,17 @@
     {
       "id": "background",
       "type": "background",
-      "paint": {"background-color": "rgb(250, 252, 251)"}
+      "paint": {
+        "background-color": [
+          "interpolate",
+          ["exponential", 0.5],
+          ["zoom"],
+          10,
+          "rgb(226, 223, 218)",
+          14,
+          "rgb(250, 252, 251)"
+        ]
+      }
     },
     {
       "id": "hillshade",
@@ -49,17 +59,9 @@
       "id": "muddy_branch_watershed",
       "type": "fill",
       "source": "muddy_branch_watershed",
-      "filter": ["all", ["==", "$type", "Polygon"]],
       "paint": {
-        "fill-color": [
-          "interpolate",
-          ["exponential", 0.5],
-          ["zoom"],
-          9,
-          "rgb(226, 223, 218)",
-          14,
-          "rgb(255, 254, 247)"
-        ]
+        "fill-color": "rgb(255, 254, 253)",
+        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 0.2]
       }
     },
     {
@@ -117,9 +119,9 @@
             ["literal", ["military", "naval_base", "airfield"]]
           ],
           "rgb(218, 219, 223)",
-          "rgb(250, 252, 251)"
+          "rgb(226, 223, 218)"
         ],
-        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.5, 16, 0.8]
+        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.1, 16, 0.5]
       }
     },
     {
