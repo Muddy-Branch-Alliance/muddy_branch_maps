@@ -48,7 +48,7 @@ module.exports.default = (context) => {
           ["literal", ["military", "naval_base", "airfield"]]
         ],
         context.colors.chrome,
-        context.colors.tan
+        context.colors.background
       ]
     }
   };

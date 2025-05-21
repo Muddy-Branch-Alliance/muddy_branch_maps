@@ -16,6 +16,10 @@
       "encoding": "terrarium",
       "url": "https://tiles.stadiamaps.com/data/terrarium.json",
       "tileSize": 256
+    },
+    "muddy_branch_watershed": {
+      "type": "geojson",
+      "data": "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_watershed.geojson"
     }
   },
   "sprite": "https://protomaps.github.io/basemaps-assets/sprites/v4/light",
@@ -24,17 +28,7 @@
     {
       "id": "background",
       "type": "background",
-      "paint": {
-        "background-color": [
-          "interpolate",
-          ["exponential", 0.5],
-          ["zoom"],
-          9,
-          "rgb(226, 223, 218)",
-          14,
-          "rgb(250, 252, 251)"
-        ]
-      }
+      "paint": {"background-color": "rgb(250, 252, 251)"}
     },
     {
       "id": "hillshade",
@@ -48,6 +42,23 @@
         "hillshade-illumination-direction": 315,
         "hillshade-method": "igor",
         "hillshade-shadow-color": "#808080"
+      }
+    },
+    {
+      "id": "muddy_branch_watershed",
+      "type": "fill",
+      "source": "muddy_branch_watershed",
+      "filter": ["all", ["==", "$type", "Polygon"]],
+      "paint": {
+        "fill-color": [
+          "interpolate",
+          ["exponential", 0.5],
+          ["zoom"],
+          9,
+          "rgb(226, 223, 218)",
+          14,
+          "rgb(255, 254, 247)"
+        ]
       }
     },
     {
@@ -105,7 +116,7 @@
             ["literal", ["military", "naval_base", "airfield"]]
           ],
           "rgb(218, 219, 223)",
-          "rgb(226, 223, 218)"
+          "rgb(250, 252, 251)"
         ],
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.5, 16, 0.8]
       }

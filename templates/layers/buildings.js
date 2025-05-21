@@ -6,7 +6,7 @@ module.exports.default = (context) => {
     "source-layer": "buildings",
     "paint": {
       "line-opacity": context.opacity.half,
-      "line-color": context.colors.black,
+      "line-color": context.colors.built_dark,
       "line-width": {
         "base": 0.5,
         "stops": [

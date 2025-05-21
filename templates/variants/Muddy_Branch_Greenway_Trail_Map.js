@@ -1,13 +1,13 @@
 module.exports.context = {
   colors: {
-    black: 'rgb(128,128,128)',
+    built_dark: 'rgb(128,128,128)',
     chrome: 'rgb(218, 219, 223)',
-    tan: 'rgb(226, 223, 218)',
     ground_dark: 'rgb(226, 223, 218)',
-    ground_light: 'rgb(250, 252, 251)',
+    ground_light: 'rgb(255, 254, 247)',
     green_light: 'rgb(178, 223, 138)',
     green_bright: 'rgb(51, 160, 44)',
     green_lightest: 'rgb(178, 223, 138)',
+    background: 'rgb(250, 252, 251)',
     water_light: 'rgb(148, 220, 251)',
     water_dark: 'rgb(89, 132, 151)',
   },
@@ -34,6 +34,10 @@ module.exports.template = {
       "encoding": "terrarium",
       "url": "https://tiles.stadiamaps.com/data/terrarium.json",
       "tileSize": 256
+    },
+    "muddy_branch_watershed": {
+      "type": "geojson",
+      "data": "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_watershed.geojson"
     }
   },
   "sprite": "https://protomaps.github.io/basemaps-assets/sprites/v4/light",
@@ -41,6 +45,7 @@ module.exports.template = {
   "layers": [
     "background",
     "hillshade",
+    "muddy_branch_watershed",
     "landuse_park",
     "landuse_aerodrome",
     "roads_runway",
