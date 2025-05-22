@@ -7,6 +7,7 @@ module.exports.context = {
     irrigated: 'rgb(178, 223, 138)',
     forest: 'rgb(51, 160, 44)',
     other_vegetation: 'rgb(178, 223, 138)',
+    trail: 'rgb(191, 56, 63)',
     watershed_highlight: 'rgb(255, 254, 253)',
     water_light: 'rgb(148, 220, 251)',
     water_dark: 'rgb(89, 132, 151)',
@@ -41,7 +42,7 @@ module.exports.template = {
       "data": "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_watershed.geojson"
     }
   },
-  "sprite": "https://protomaps.github.io/basemaps-assets/sprites/v4/light",
+  "sprite": "https://mizmay.github.io/muddy_branch_maps/assets/Muddy_Branch_Greenway_Trail_Map/sprites/sprites",
   "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
   "layers": [
     "background",
@@ -52,7 +53,6 @@ module.exports.template = {
     "roads_runway",
     "roads_taxiway",
     "landuse_runway",
-    "muddy_branch_parking",
     "water",
     "water_stream",
     "water_river",
@@ -85,6 +85,7 @@ module.exports.template = {
     "roads_highway",
     "roads_rail",
     "muddy-branch-trail",
+    "muddy_branch_parking",
     "roads_bridges_other_casing",
     "roads_bridges_link_casing",
     "roads_bridges_minor_casing",
@@ -100,10 +101,10 @@ module.exports.template = {
     "water_label_ocean",
     "water_label_lakes",
     "roads_labels_major",
-    "pois",
     "places_subplace",
     "places_locality",
-    "places_region"
+    "places_region",
+    "muddy_branch_trailhead"
   ],
   "id": "h7f7a74"
 };

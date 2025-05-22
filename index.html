@@ -14,7 +14,11 @@
     <body>
         <style>
             #map canvas {
-                cursor: crosshair;
+                cursor: grab;
+            }
+            .maplibregl-popup-content {
+                font-size: 12px;
+                color: green;
             }
         </style>
         <div id="map"></div>
@@ -42,6 +46,41 @@
 
                 map.addControl(new maplibregl.AttributionControl({compact: true}));
                 map.addControl(new maplibregl.NavigationControl(), 'top-right');
+
+                // When a click event occurs on a parking icon, open a popup at the
+                // location of the feature, with description HTML from its properties.
+                map.on('click', 'muddy_branch_trailhead', (e) => {
+                    const coordinates = e.features[0].geometry.coordinates.slice();
+                    const properties = e.features[0].properties;
+
+                    // Ensure that if the map is zoomed out such that multiple
+                    // copies of the feature are visible, the popup appears
+                    // over the copy being pointed to.
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
+
+                    let popup_info = "<table id='popup'>";
+                    for (let x in properties) {
+                        popup_info += "<tr><td>" + x + "</td><td>" + properties[x] + "</td></tr>";
+                    }
+                    popup_info +="</table>";
+                
+                    new maplibregl.Popup()
+                        .setLngLat(coordinates)
+                        .setHTML(popup_info)
+                        .addTo(map);
+                    });
+
+                // Change the cursor to a pointer when the mouse is over the places layer.
+                map.on('mouseenter', 'muddy_branch_trailhead', () => {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+
+                // Change it back to a pointer when it leaves.
+                map.on('mouseleave', 'muddy_branch_trailhead', () => {
+                    map.getCanvas().style.cursor = '';
+                });
             });
         </script>
     </body>
