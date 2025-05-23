@@ -47,18 +47,12 @@
                 map.addControl(new maplibregl.AttributionControl({compact: true}));
                 map.addControl(new maplibregl.NavigationControl(), 'top-right');
 
-                // When a click event occurs on a parking icon, open a popup at the
+                // When a click event occurs on an access point icon, open a popup at the
                 // location of the feature, with description HTML from its properties.
-                map.on('click', 'muddy_branch_trailhead', (e) => {
-                    const coordinates = e.features[0].geometry.coordinates.slice();
+                map.on('click', 'muddy_branch_access', (e) => {
+                    const coordinates = e.lngLat
+                    console.log(coordinates);
                     const properties = e.features[0].properties;
-
-                    // Ensure that if the map is zoomed out such that multiple
-                    // copies of the feature are visible, the popup appears
-                    // over the copy being pointed to.
-                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-                    }
 
                     let popup_info = "<table id='popup'>";
                     for (let x in properties) {
@@ -73,12 +67,12 @@
                     });
 
                 // Change the cursor to a pointer when the mouse is over the places layer.
-                map.on('mouseenter', 'muddy_branch_trailhead', () => {
+                map.on('mouseenter', 'muddy_branch_access', () => {
                     map.getCanvas().style.cursor = 'pointer';
                 });
 
                 // Change it back to a pointer when it leaves.
-                map.on('mouseleave', 'muddy_branch_trailhead', () => {
+                map.on('mouseleave', 'muddy_branch_access', () => {
                     map.getCanvas().style.cursor = '';
                 });
             });

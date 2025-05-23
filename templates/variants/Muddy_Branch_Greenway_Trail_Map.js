@@ -104,7 +104,7 @@ module.exports.template = {
     "places_subplace",
     "places_locality",
     "places_region",
-    "muddy_branch_trailhead"
+    "muddy_branch_access"
   ],
   "id": "h7f7a74"
 };
