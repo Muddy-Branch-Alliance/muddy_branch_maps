@@ -43,7 +43,7 @@ module.exports.template = {
     }
   },
   "sprite": "https://mizmay.github.io/muddy_branch_maps/assets/Muddy_Branch_Greenway_Trail_Map/sprites/sprites",
-  "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
+  "glyphs": "https://mizmay.github.io/muddy_branch_maps/assets/Muddy_Branch_Greenway_Trail_Map/fonts/{fontstack}/{range}.pbf",
   "layers": [
     "background",
     "hillshade",
