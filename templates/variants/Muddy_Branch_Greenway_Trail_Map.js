@@ -18,6 +18,8 @@ module.exports.context = {
     water_light: 'rgb(148, 220, 251)',
     water_dark: 'rgb(89, 132, 151)',
     waterLabel: 'rgb(66, 99, 115)',
+    greenspaceLabel: 'rgb(25, 80, 22)',
+    otherLabel: 'rgb(106, 91, 143)'
   }
 };
 
@@ -104,6 +106,7 @@ module.exports.template = {
     "water_label_lakes",
     "roads_labels_trail",
     "roads_labels_major",
+    "pois",
     "places_subplace",
     "places_locality",
     "muddy_branch_access"

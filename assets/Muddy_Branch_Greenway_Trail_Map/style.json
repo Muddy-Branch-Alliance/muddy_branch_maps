@@ -1461,6 +1461,100 @@
       }
     },
     {
+      "id": "pois",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "pois",
+      "filter": [
+        "all",
+        [
+          "in",
+          ["get", "kind"],
+          [
+            "literal",
+            [
+              "beach",
+              "forest",
+              "marina",
+              "park",
+              "peak",
+              "zoo",
+              "garden",
+              "bench",
+              "aerodrome",
+              "station",
+              "bus_stop",
+              "ferry_terminal",
+              "stadium",
+              "university",
+              "library",
+              "school",
+              "animal",
+              "toilets",
+              "drinking_water"
+            ]
+          ]
+        ],
+        [">=", ["zoom"], ["+", ["get", "min_zoom"], 0]]
+      ],
+      "layout": {
+        "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
+        "text-font": ["Noto Sans Regular"],
+        "text-justify": "auto",
+        "text-max-width": 7,
+        "text-size": ["interpolate", ["linear"], ["zoom"], 17, 10, 19, 16]
+      },
+      "paint": {
+        "text-color": [
+          "case",
+          [
+            "in",
+            ["get", "kind"],
+            [
+              "literal",
+              [
+                "beach",
+                "forest",
+                "marina",
+                "park",
+                "peak",
+                "zoo",
+                "garden",
+                "bench"
+              ]
+            ]
+          ],
+          "rgb(25, 80, 22)",
+          [
+            "in",
+            ["get", "kind"],
+            ["literal", ["aerodrome", "station", "bus_stop", "ferry_terminal"]]
+          ],
+          "rgb(106, 91, 143)",
+          [
+            "in",
+            ["get", "kind"],
+            [
+              "literal",
+              [
+                "stadium",
+                "university",
+                "library",
+                "school",
+                "animal",
+                "toilets",
+                "drinking_water"
+              ]
+            ]
+          ],
+          "rgb(106, 91, 143)",
+          "rgb(106, 91, 143)"
+        ],
+        "text-halo-color": "rgb(224, 224, 224)",
+        "text-halo-width": 1
+      }
+    },
+    {
       "id": "places_subplace",
       "type": "symbol",
       "source": "protomaps",
