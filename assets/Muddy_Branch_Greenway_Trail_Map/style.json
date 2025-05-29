@@ -1004,7 +1004,15 @@
       "source": "muddy_branch_relation",
       "filter": ["all", ["==", "$type", "LineString"]],
       "paint": {
-        "line-color": "rgb(191, 56, 63)",
+        "line-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          10,
+          "rgb(191, 56, 63)",
+          16,
+          "rgb(139, 69, 19)"
+        ],
         "line-dasharray": [3, 1],
         "line-width": [
           "interpolate",
@@ -1427,8 +1435,8 @@
         ]
       },
       "paint": {
-        "text-color": "rgb(92, 92, 92)",
-        "text-halo-color": "rgb(224, 224, 224)",
+        "text-color": "rgb(12, 40, 11)",
+        "text-halo-color": "rgb(178, 223, 138)",
         "text-halo-width": 1
       }
     },
@@ -1501,7 +1509,7 @@
         "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
         "text-font": ["Noto Sans Regular"],
         "text-justify": "auto",
-        "text-max-width": 7,
+        "text-max-width": 8,
         "text-size": ["interpolate", ["linear"], ["zoom"], 17, 10, 19, 16]
       },
       "paint": {

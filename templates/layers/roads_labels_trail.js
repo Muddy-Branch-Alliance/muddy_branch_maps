@@ -19,8 +19,8 @@ module.exports.default = (context) => {
       "text-letter-spacing": ["interpolate", ["linear"], ["zoom"], 14, 0.1, 15, 0.05],
     },
     "paint": {
-      "text-color": context.colors.locality,
-      "text-halo-color": context.colors.halo,
+      "text-color": context.colors.trailLabel,
+      "text-halo-color": context.colors.other_vegetation,
       "text-halo-width": 1
     }
   };

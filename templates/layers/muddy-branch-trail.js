@@ -5,7 +5,7 @@ module.exports.default = (context) => {
     "source": "muddy_branch_relation",
     "filter": ["all", ["==", "$type", "LineString"]],
     "paint": {
-      "line-color": context.colors.trail,
+      "line-color": ["interpolate", ["linear"], ["zoom"], 10, context.colors.trail, 16, context.colors.trail_highzoom],
       "line-dasharray": [3, 1],
       "line-width": ["interpolate", ["exponential", 1.6], ["zoom"], 10, 1.2, 20, 7]
     }

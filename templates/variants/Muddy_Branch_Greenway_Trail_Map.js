@@ -14,10 +14,12 @@ module.exports.context = {
     forest: 'rgb(51, 160, 44)',
     other_vegetation: 'rgb(178, 223, 138)',
     trail: 'rgb(191, 56, 63)',
+    trail_highzoom: 'rgb(139, 69, 19)',
     watershed_highlight: 'rgb(255, 254, 253)',
     water_light: 'rgb(148, 220, 251)',
     water_dark: 'rgb(89, 132, 151)',
     waterLabel: 'rgb(66, 99, 115)',
+    trailLabel: 'rgb(12, 40, 11)',
     greenspaceLabel: 'rgb(25, 80, 22)',
     otherLabel: 'rgb(106, 91, 143)'
   }
