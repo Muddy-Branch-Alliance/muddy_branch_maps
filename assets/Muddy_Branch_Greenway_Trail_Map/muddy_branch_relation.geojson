@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-turbo",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2025-04-24T23:39:46Z",
+  "timestamp": "2025-05-29T00:11:16Z",
   "features": [
     {
       "type": "Feature",
@@ -90,11 +90,61 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "way/411222691",
+        "addr:city": "Potomac",
+        "addr:housenumber": "19750",
+        "addr:postcode": "20854",
+        "addr:state": "MD",
+        "addr:street": "Pennyfield Lock Road",
+        "building": "yes",
+        "charge": "110 USD",
+        "contact:website": "https://www.canaltrust.org/programs/canal-quarters/canal-quarters-lockhouses-overview/lockhouse-22/",
+        "fee": "yes",
+        "fireplace": "no",
+        "name": "Pennyfield Lockhouse",
+        "name:en": "Lockhouse 22",
+        "operator": "C&O Canal Trust",
+        "tourism": "wilderness_hut",
+        "website": "https://www.canaltrust.org/programs/canal-quarters/canal-quarters-lockhouses-overview/lockhouse-22/"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -77.2889089,
+              39.0536769
+            ],
+            [
+              -77.2889498,
+              39.0536356
+            ],
+            [
+              -77.2888653,
+              39.0535851
+            ],
+            [
+              -77.2888244,
+              39.0536264
+            ],
+            [
+              -77.2889089,
+              39.0536769
+            ]
+          ]
+        ]
+      },
+      "id": "way/411222691"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "way/587854806",
         "access": "yes",
         "amenity": "parking",
         "fee": "no",
         "hiking": "yes",
+        "name": "Boat Ramp parking lot",
         "parking": "surface",
         "surface": "unpaved"
       },
@@ -222,6 +272,7 @@
         "amenity": "parking",
         "fee": "no",
         "hiking": "yes",
+        "name": "Pennyfield Lockhouse parking lot",
         "parking": "surface",
         "surface": "unpaved"
       },
@@ -313,6 +364,48 @@
         ]
       },
       "id": "way/659418815"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1116018860",
+        "access": "yes",
+        "amenity": "toilets",
+        "building": "yes",
+        "changing_table": "no",
+        "portable": "yes",
+        "toilets:disposal": "chemical",
+        "toilets:handwashing": "no",
+        "unisex": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -77.2902554,
+              39.0550031
+            ],
+            [
+              -77.2902392,
+              39.0550126
+            ],
+            [
+              -77.2902557,
+              39.0550295
+            ],
+            [
+              -77.2902719,
+              39.05502
+            ],
+            [
+              -77.2902554,
+              39.0550031
+            ]
+          ]
+        ]
+      },
+      "id": "way/1116018860"
     },
     {
       "type": "Feature",
@@ -1192,24 +1285,32 @@
             39.0846025
           ],
           [
-            -77.2611814,
-            39.0845308
+            -77.2611702,
+            39.0845272
           ],
           [
-            -77.2612306,
-            39.0844971
+            -77.2611686,
+            39.0844719
           ],
           [
-            -77.2612886,
-            39.0844573
+            -77.2611802,
+            39.0844304
           ],
           [
-            -77.261565,
-            39.0842679
+            -77.2612419,
+            39.084371
           ],
           [
-            -77.2617408,
-            39.0841474
+            -77.2613717,
+            39.0842916
+          ],
+          [
+            -77.2615809,
+            39.0841932
+          ],
+          [
+            -77.2617688,
+            39.084093
           ],
           [
             -77.2619554,
@@ -1220,12 +1321,20 @@
             39.0838967
           ],
           [
-            -77.2624812,
-            39.0838379
+            -77.2625074,
+            39.0838401
           ],
           [
-            -77.2625955,
-            39.08374
+            -77.2625572,
+            39.0838173
+          ],
+          [
+            -77.2625926,
+            39.0837751
+          ],
+          [
+            -77.2626309,
+            39.0837153
           ],
           [
             -77.2627111,
@@ -2126,8 +2235,8 @@
         "type": "LineString",
         "coordinates": [
           [
-            -77.2895886,
-            39.0769489
+            -77.2895569,
+            39.0769261
           ],
           [
             -77.2895836,
@@ -3910,52 +4019,52 @@
         "type": "LineString",
         "coordinates": [
           [
-            -77.2895886,
-            39.0769489
+            -77.2895569,
+            39.0769261
           ],
           [
-            -77.2894512,
-            39.0767174
+            -77.2894436,
+            39.0766989
           ],
           [
-            -77.28923,
-            39.076328
+            -77.2891499,
+            39.0761848
           ],
           [
-            -77.2890648,
-            39.076097
+            -77.2890903,
+            39.0760989
           ],
           [
-            -77.2889032,
-            39.0758711
+            -77.288868,
+            39.0758096
           ],
           [
-            -77.2888106,
-            39.0757554
+            -77.2888163,
+            39.0757445
           ],
           [
-            -77.2883927,
-            39.0752329
+            -77.2884075,
+            39.075211
           ],
           [
-            -77.288145,
-            39.0748746
+            -77.288156,
+            39.0748658
           ],
           [
-            -77.287971,
-            39.074623
+            -77.2878399,
+            39.0744667
           ],
           [
-            -77.287857,
-            39.074493
+            -77.2877227,
+            39.0743651
           ],
           [
-            -77.287719,
-            39.074375
+            -77.2876057,
+            39.074281
           ],
           [
-            -77.28749,
-            39.074222
+            -77.2873859,
+            39.0741439
           ],
           [
             -77.2871493,
@@ -8306,8 +8415,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -77.2895886,
-          39.0769489
+          -77.2895569,
+          39.0769261
         ]
       },
       "id": "node/49258478"
