@@ -1,11 +1,11 @@
 module.exports.default = (context) => {
   const baseStyle = {
-    "id": "roads_labels_major",
+    "id": "roads_labels_trail",
     "type": "symbol",
     "source": "protomaps",
     "source-layer": "roads",
-    "minzoom": 11,
-    "filter": ["in", "kind", "highway", "major_road"],
+    "minzoom": 14,
+    "filter": ["in", "kind", "other", "path"],
     "layout": {
       "symbol-sort-key": ["get", "min_zoom"],
       "symbol-placement": "line",
@@ -15,11 +15,12 @@ module.exports.default = (context) => {
         ["get", "name:en"],
         ["get", "name"]
       ],
-      "text-size": 12
+      "text-size": ["interpolate", ["exponential",0.7], ["zoom"], 14, 12, 18, 16],
+      "text-letter-spacing": ["interpolate", ["linear"], ["zoom"], 14, 0.1, 15, 0.05],
     },
     "paint": {
-      "text-color": context.colors.road_label,
-      "text-halo-color": context.colors.halo_light,
+      "text-color": context.colors.locality,
+      "text-halo-color": context.colors.halo,
       "text-halo-width": 1
     }
   };

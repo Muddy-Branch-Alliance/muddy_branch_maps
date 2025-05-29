@@ -102,6 +102,7 @@ module.exports.template = {
     "water_waterway_label",
     "roads_labels_minor",
     "water_label_lakes",
+    "roads_labels_trail",
     "roads_labels_major",
     "places_subplace",
     "places_locality",
