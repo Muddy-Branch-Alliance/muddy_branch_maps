@@ -4,6 +4,7 @@ module.exports.context = {
     chrome: 'rgb(218, 219, 223)',
     locality: 'rgb(92, 92, 92)',
     neighborhood: 'rgb(118, 118, 118)',
+    road_label: 'rgb(130, 130, 130)',
     halo: 'rgb(224, 224, 224)',
     ground_dark: 'rgb(226, 223, 218)',
     ground_light: 'rgb(250, 252, 251)',
