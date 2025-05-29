@@ -1,6 +1,6 @@
 module.exports.context = {
   colors: {
-    built_dark: 'rgb(128,128,128)',
+    building: 'rgb(234, 234, 234)',
     chrome: 'rgb(218, 219, 223)',
     locality: 'rgb(92, 92, 92)',
     neighborhood: 'rgb(118, 118, 118)',
@@ -17,9 +17,6 @@ module.exports.context = {
     watershed_highlight: 'rgb(255, 254, 253)',
     water_light: 'rgb(148, 220, 251)',
     water_dark: 'rgb(89, 132, 151)',
-  },
-  opacity: {
-    half: 0.5,
   }
 };
 
