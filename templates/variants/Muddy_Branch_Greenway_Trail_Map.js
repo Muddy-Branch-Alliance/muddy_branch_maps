@@ -17,6 +17,7 @@ module.exports.context = {
     watershed_highlight: 'rgb(255, 254, 253)',
     water_light: 'rgb(148, 220, 251)',
     water_dark: 'rgb(89, 132, 151)',
+    waterLabel: 'rgb(66, 99, 115)',
   }
 };
 
@@ -57,8 +58,7 @@ module.exports.template = {
     "roads_taxiway",
     "landuse_runway",
     "water",
-    "water_stream",
-    "water_river",
+    "water_waterway",
     "landuse_pedestrian",
     "landuse_pier",
     "roads_tunnels_other_casing",
@@ -101,7 +101,6 @@ module.exports.template = {
     "roads_bridges_highway",
     "water_waterway_label",
     "roads_labels_minor",
-    "water_label_ocean",
     "water_label_lakes",
     "roads_labels_major",
     "places_subplace",
