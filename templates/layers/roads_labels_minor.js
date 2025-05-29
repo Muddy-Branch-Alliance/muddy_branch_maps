@@ -9,7 +9,7 @@ module.exports.default = (context) => {
     "layout": {
       "symbol-sort-key": ["get", "min_zoom"],
       "symbol-placement": "line",
-      "text-font": ["Noto Sans Regular"],
+      "text-font": ["Noto Sans Medium"],
       "text-field": [
         "case",
         [
@@ -297,8 +297,8 @@ module.exports.default = (context) => {
       "text-size": 12
     },
     "paint": {
-      "text-color": "#91888b",
-      "text-halo-color": "#ffffff",
+      "text-color": context.colors.road_label_light,
+      "text-halo-color": context.colors.halo_light,
       "text-halo-width": 1
     }
   };
