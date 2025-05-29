@@ -12,7 +12,7 @@ module.exports.default = (context) => {
         ["get", "name:en"],
         ["get", "name"]
       ],
-      "text-size": ["interpolate", ["linear"], ["zoom"], 3, 10, 6, 12, 10, 12],
+      "text-size": ["interpolate", ["linear"], ["zoom"], 3, 10, 6, 12, 15, 12, 17, 16],
       "text-letter-spacing": 0.1,
       "text-max-width": 9
     },

@@ -1320,7 +1320,7 @@
         ],
         "text-size": [
           "interpolate",
-          ["exponential", 1.2],
+          ["exponential", 1.6],
           ["zoom"],
           12,
           12,
@@ -1348,7 +1348,15 @@
         "symbol-sort-key": ["get", "min_zoom"],
         "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
         "text-font": ["Noto Sans Medium"],
-        "text-size": 12
+        "text-size": [
+          "interpolate",
+          ["exponential", 0.7],
+          ["zoom"],
+          14,
+          12,
+          18,
+          14
+        ]
       },
       "paint": {
         "text-color": "rgb(156, 156, 156)",
@@ -1367,7 +1375,19 @@
         "text-font": ["Noto Sans Italic"],
         "text-letter-spacing": 0.1,
         "text-max-width": 9,
-        "text-size": ["interpolate", ["linear"], ["zoom"], 3, 10, 6, 12, 10, 12]
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          3,
+          10,
+          6,
+          12,
+          15,
+          12,
+          17,
+          16
+        ]
       },
       "paint": {
         "text-color": "rgb(89, 132, 151)",
@@ -1386,7 +1406,7 @@
         "symbol-placement": "line",
         "symbol-sort-key": ["get", "min_zoom"],
         "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
-        "text-font": ["Noto Sans Regular"],
+        "text-font": ["Noto Sans Medium"],
         "text-letter-spacing": [
           "interpolate",
           ["linear"],
@@ -1403,7 +1423,7 @@
           14,
           12,
           18,
-          16
+          14
         ]
       },
       "paint": {
@@ -1424,7 +1444,15 @@
         "symbol-sort-key": ["get", "min_zoom"],
         "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
         "text-font": ["Noto Sans Regular"],
-        "text-size": 12
+        "text-size": [
+          "interpolate",
+          ["exponential", 0.7],
+          ["zoom"],
+          11,
+          12,
+          18,
+          15
+        ]
       },
       "paint": {
         "text-color": "rgb(143, 143, 143)",

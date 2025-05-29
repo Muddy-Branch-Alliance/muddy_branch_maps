@@ -14,7 +14,7 @@ module.exports.default = (context) => {
         ["get", "name:en"],
         ["get", "name"]
       ],
-      "text-size": ["interpolate", ["exponential",1.2], ["zoom"], 12, 12, 14, 12, 18, 16],
+      "text-size": ["interpolate", ["exponential",1.6], ["zoom"], 12, 12, 14, 12, 18, 16],
       "text-letter-spacing": ["interpolate", ["linear"], ["zoom"], 13, 0.2, 15, 0.05],
     },
     "paint": {
