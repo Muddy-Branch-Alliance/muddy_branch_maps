@@ -7,7 +7,11 @@ module.exports.default = (context) => {
     "filter": ["==", "kind", "locality"],
     "minzoom": 10,
     "layout": {
-      "text-field": ["get", "name"],
+      "text-field": [
+        "coalesce",
+        ["get", "name:en"],
+        ["get", "name"]
+      ],
       "text-font": ["Noto Sans Regular"],
       "text-padding": 11,
       "text-size": [
