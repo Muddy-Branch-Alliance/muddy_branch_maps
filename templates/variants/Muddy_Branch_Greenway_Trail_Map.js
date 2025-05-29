@@ -2,6 +2,8 @@ module.exports.context = {
   colors: {
     built_dark: 'rgb(128,128,128)',
     chrome: 'rgb(218, 219, 223)',
+    locality: 'rgb(92, 92, 92)',
+    halo: 'rgb(224, 224, 224)',
     ground_dark: 'rgb(226, 223, 218)',
     ground_light: 'rgb(250, 252, 251)',
     irrigated: 'rgb(178, 223, 138)',
@@ -103,7 +105,6 @@ module.exports.template = {
     "roads_labels_major",
     "places_subplace",
     "places_locality",
-    "places_region",
     "muddy_branch_access"
   ],
   "id": "h7f7a74"
