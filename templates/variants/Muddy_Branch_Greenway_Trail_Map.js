@@ -50,8 +50,8 @@ module.exports.template = {
       "data": "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_watershed.geojson"
     }
   },
-  "sprite": "https://mizmay.github.io/muddy_branch_maps/assets/Muddy_Branch_Greenway_Trail_Map/sprites/sprites",
-  "glyphs": "https://mizmay.github.io/muddy_branch_maps/assets/Muddy_Branch_Greenway_Trail_Map/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://mizmay.github.io/muddy_branch_maps/assets/sprites/sprites",
+  "glyphs": "https://mizmay.github.io/muddy_branch_maps/assets/fonts/{fontstack}/{range}.pbf",
   "layers": [
     "background",
     "hillshade",
