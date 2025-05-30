@@ -8,7 +8,12 @@ module.exports.default = (context) => {
       "icon-image": "parking",
       "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.7, 16, 0.8],
       "icon-allow-overlap": true,
-      "icon-ignore-placement": true,
+      "icon-ignore-placement": true
+    },
+    "paint": {
+      "icon-color": "blue",
+      "icon-halo-color": "white",
+      "icon-halo-width": 3,
     }
   };
   let overrides = {};
