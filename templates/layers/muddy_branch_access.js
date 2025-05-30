@@ -3,23 +3,12 @@ module.exports.default = (context) => {
     "id": "muddy_branch_access",
     "type": "symbol",
     "source": "muddy_branch_relation",
-    "filter": ["any", ["==", "highway", "trailhead"],["==", "$type", "Polygon"]],
+    "filter": ["==", "$type", "Point"],
     "layout": {
-      "icon-image": [
-        "match",
-        ["geometry-type"],
-        "Polygon",
-        "poi_car_shop",
-        "place_dot"
-      ],
-      "icon-size": [
-        "match",
-        ["geometry-type"],
-        "Polygon",
-        0.7,
-        0.5
-      ],
+      "icon-image": "place_dot",
+      "icon-size": 0.5,
       "icon-allow-overlap": true,
+      "icon-ignore-placement": true,
     }
   };
   let overrides = {};

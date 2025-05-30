@@ -92,7 +92,6 @@ module.exports.template = {
     "roads_highway",
     "roads_rail",
     "muddy-branch-trail",
-    "muddy_branch_parking",
     "roads_bridges_other_casing",
     "roads_bridges_link_casing",
     "roads_bridges_minor_casing",
@@ -111,7 +110,8 @@ module.exports.template = {
     "pois",
     "places_subplace",
     "places_locality",
-    "muddy_branch_access"
+    "muddy_branch_access",
+    "muddy_branch_parking"
   ],
   "id": "h7f7a74"
 };
