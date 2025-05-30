@@ -1,14 +1,14 @@
 module.exports.default = (context) => {
   const baseStyle = {
     "id": "muddy_branch_access",
-    "type": "symbol",
+    "type": "circle",
     "source": "muddy_branch_relation",
     "filter": ["==", "$type", "Point"],
-    "layout": {
-      "icon-image": "place_dot",
-      "icon-size": 0.5,
-      "icon-allow-overlap": true,
-      "icon-ignore-placement": true,
+    "paint": {
+      "circle-color": context.colors.trail_highzoom,
+      "circle-radius": 3.5,
+      "circle-stroke-width": 1,
+      "circle-stroke-color": context.colors.other_vegetation,
     }
   };
   let overrides = {};

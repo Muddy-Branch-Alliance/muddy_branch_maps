@@ -1,2 +1,0 @@
-https://github.com/openmaptiles/fiord-color-gl-style.git
-a7faefb

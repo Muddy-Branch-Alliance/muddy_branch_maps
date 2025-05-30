@@ -5,8 +5,10 @@ module.exports.default = (context) => {
     "source": "muddy_branch_relation",
     "filter": ["==", "$type", "Polygon"],
     "layout": {
-      "icon-image": "poi_car_shop",
-      "icon-size": 0.7
+      "icon-image": "parking",
+      "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.7, 16, 0.8],
+      "icon-allow-overlap": true,
+      "icon-ignore-placement": true,
     }
   };
   let overrides = {};

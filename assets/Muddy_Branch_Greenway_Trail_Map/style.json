@@ -1635,14 +1635,14 @@
     },
     {
       "id": "muddy_branch_access",
-      "type": "symbol",
+      "type": "circle",
       "source": "muddy_branch_relation",
       "filter": ["==", "$type", "Point"],
-      "layout": {
-        "icon-allow-overlap": true,
-        "icon-ignore-placement": true,
-        "icon-image": "place_dot",
-        "icon-size": 0.5
+      "paint": {
+        "circle-color": "rgb(139, 69, 19)",
+        "circle-radius": 3.5,
+        "circle-stroke-color": "rgb(178, 223, 138)",
+        "circle-stroke-width": 1
       }
     },
     {
@@ -1650,7 +1650,12 @@
       "type": "symbol",
       "source": "muddy_branch_relation",
       "filter": ["==", "$type", "Polygon"],
-      "layout": {"icon-image": "poi_car_shop", "icon-size": 0.7}
+      "layout": {
+        "icon-allow-overlap": true,
+        "icon-ignore-placement": true,
+        "icon-image": "parking",
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.7, 16, 0.8]
+      }
     }
   ],
   "id": "h7f7a74"
