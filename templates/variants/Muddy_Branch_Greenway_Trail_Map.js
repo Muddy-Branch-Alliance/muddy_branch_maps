@@ -21,7 +21,8 @@ module.exports.context = {
     waterLabel: 'rgb(66, 99, 115)',
     trailLabel: 'rgb(12, 40, 11)',
     greenspaceLabel: 'rgb(25, 80, 22)',
-    otherLabel: 'rgb(106, 91, 143)'
+    otherLabel: 'rgb(106, 91, 143)',
+    parkingIcon: 'rgb(0, 0, 255)',
   }
 };
 

@@ -3,17 +3,17 @@ module.exports.default = (context) => {
     "id": "muddy_branch_parking",
     "type": "symbol",
     "source": "muddy_branch_relation",
-    "filter": ["==", "$type", "Polygon"],
+    "filter": ["all",["==", "$type", "Polygon"],["==", "amenity", "parking"]],
     "layout": {
-      "icon-image": "parking",
-      "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.7, 16, 0.8],
+      "icon-image": "p-circle",
+      "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5],
       "icon-allow-overlap": true,
       "icon-ignore-placement": true
     },
     "paint": {
-      "icon-color": "blue",
-      "icon-halo-color": "white",
-      "icon-halo-width": 3,
+      "icon-color": context.colors.parkingIcon,
+      "icon-halo-color": context.colors.halo,
+      "icon-halo-width": 1,
     }
   };
   let overrides = {};

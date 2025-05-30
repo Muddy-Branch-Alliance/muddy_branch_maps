@@ -1649,17 +1649,21 @@
       "id": "muddy_branch_parking",
       "type": "symbol",
       "source": "muddy_branch_relation",
-      "filter": ["==", "$type", "Polygon"],
+      "filter": [
+        "all",
+        ["==", "$type", "Polygon"],
+        ["==", "amenity", "parking"]
+      ],
       "layout": {
         "icon-allow-overlap": true,
         "icon-ignore-placement": true,
-        "icon-image": "parking",
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.7, 16, 0.8]
+        "icon-image": "p-circle",
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5]
       },
       "paint": {
-        "icon-color": "blue",
-        "icon-halo-color": "white",
-        "icon-halo-width": 3
+        "icon-color": "rgb(0, 0, 255)",
+        "icon-halo-color": "rgb(224, 224, 224)",
+        "icon-halo-width": 1
       }
     }
   ],
