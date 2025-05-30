@@ -112,6 +112,7 @@ module.exports.template = {
     "places_subplace",
     "places_locality",
     "muddy_branch_access",
+    "muddy_branch_landmark",
     "muddy_branch_parking"
   ],
   "id": "h7f7a74"
