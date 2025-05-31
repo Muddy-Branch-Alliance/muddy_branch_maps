@@ -11,7 +11,7 @@ module.exports.default = (context) => {
       "icon-ignore-placement": true
     },
     "paint": {
-      "icon-color": context.colors.parkingIcon,
+      "icon-color": context.colors.serviceIcon,
       "icon-halo-color": context.colors.halo,
       "icon-halo-width": 1,
     }

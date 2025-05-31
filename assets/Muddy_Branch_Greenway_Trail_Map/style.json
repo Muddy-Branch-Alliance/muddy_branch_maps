@@ -1655,13 +1655,16 @@
         ["!=", "amenity", "parking"]
       ],
       "layout": {
-        "icon-allow-overlap": true,
-        "icon-ignore-placement": true,
-        "icon-image": "car_11",
+        "icon-image": [
+          "case",
+          ["==", ["get", "amenity"], "toilets"],
+          "toilet-solid",
+          "landmark-solid"
+        ],
         "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5]
       },
       "paint": {
-        "icon-color": "rgb(0, 0, 255)",
+        "icon-color": "rgb(106, 91, 143)",
         "icon-halo-color": "rgb(224, 224, 224)",
         "icon-halo-width": 1
       }

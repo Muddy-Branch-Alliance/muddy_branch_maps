@@ -22,7 +22,7 @@ module.exports.context = {
     trailLabel: 'rgb(12, 40, 11)',
     greenspaceLabel: 'rgb(25, 80, 22)',
     otherLabel: 'rgb(106, 91, 143)',
-    parkingIcon: 'rgb(0, 0, 255)',
+    serviceIcon: 'rgb(0, 0, 255)',
   }
 };
 

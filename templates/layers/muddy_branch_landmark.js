@@ -5,13 +5,11 @@ module.exports.default = (context) => {
     "source": "muddy_branch_relation",
     "filter": ["all",["==", "$type", "Polygon"],["!=", "amenity", "parking"]],
     "layout": {
-      "icon-image": "landmark-solid",
-      "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5],
-      "icon-allow-overlap": true,
-      "icon-ignore-placement": true
+      "icon-image": ["case",["==",["get", "amenity"], "toilets"], "toilet-solid","landmark-solid"],
+      "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5]
     },
     "paint": {
-      "icon-color": context.colors.trail_highzoom,
+      "icon-color": context.colors.otherLabel,
       "icon-halo-color": context.colors.halo,
       "icon-halo-width": 1,
     }
