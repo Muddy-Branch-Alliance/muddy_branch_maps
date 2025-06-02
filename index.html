@@ -16,9 +16,13 @@
             #map canvas {
                 cursor: grab;
             }
-            .maplibregl-popup-content {
-                font-size: 12px;
+            
+            .maplibregl-popup h3.custom-popup {
+                font-size: 16px;
                 color: green;
+            }
+            .popup_table {
+                font-size: 14px;
             }
         </style>
         <div id="map"></div>
@@ -51,11 +55,26 @@
                 // location of the feature, with description HTML from its properties.
                 map.on('click', ['muddy_branch_access','muddy_branch_parking','muddy_branch_landmark'], (e) => {
                     const coordinates = e.lngLat
-                    console.log(coordinates);
                     const properties = e.features[0].properties;
 
-                    let popup_info = "<table id='popup'>";
-                    for (let x in properties) {
+                    let popup_info = '';
+                    let table_content = properties;
+                    // select from this explicit list of properties:
+                    const {surface, fee, changing_table, portable, unisex} = properties;
+                    if (properties.amenity === "parking") {
+                        popup_info = popup_info ? popup_info : "Parking Lot";
+                        // Show these properties for parking lots:
+                        table_content = {surface, fee};
+                        popup_info = properties.name;
+                    } else if (properties.amenity === "toilets") {
+                        popup_info = popup_info ? popup_info : "Restroom";
+                        // Show these properties for restrooms:
+                        table_content = {changing_table, portable, unisex}
+                    };
+
+                    popup_info = "<h3 class='custom-popup'>" + popup_info + "</h3>";
+                    popup_info += "<table id='popup' class='popup_table'>";
+                    for (let x in table_content) {
                         popup_info += "<tr><td>" + x + "</td><td>" + properties[x] + "</td></tr>";
                     }
                     popup_info +="</table>";
