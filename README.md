@@ -46,7 +46,15 @@ out skel qt;
 3. ( Optional / Recommended ) Verify the updates in the GeoJSON make sense compared with `muddy_branch_relation.geojson`.
 4. Replace `muddy_branch_relation.geojson` with the file you just downloaded.
 
-## Extracting (Updating) Reference Layers
+## Icons and Fonts
+
+[ ADD DOCUMENTATION HERE ]
+
+### Icons
+
+### Fonts
+
+## Reference Layers
 
 
 The _reference layers_ are everything on the map _not_ coming directly from the OpenStreetMap query above.
@@ -57,7 +65,7 @@ The _reference layers_ are everything on the map _not_ coming directly from the 
 
 ### Protomaps
 
-Everything else was downloaded from (Protomaps)[https://docs.protomaps.com] and saved as `muddy_branch_area.pmtiles`. Here's how to download and replace these layers:
+Everything else was downloaded from (Protomaps)[https://docs.protomaps.com] and saved as `muddy_branch_area.pmtiles`. Should these layers ever become out-of-date and you need a more recent version, here's how to download and replace these layers:
 1. Follow the (Getting Started)[https://docs.protomaps.com/guide/getting-started] guide to install the CLI and find the latest daily planet file
 2. Paste this at the command line, replacing <LATEST_PLANET_FILE> with the name of the latest daily planet file:
 ```
