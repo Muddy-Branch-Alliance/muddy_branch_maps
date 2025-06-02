@@ -1639,9 +1639,24 @@
       "source": "muddy_branch_relation",
       "filter": ["==", "$type", "Point"],
       "paint": {
-        "circle-color": "rgb(139, 69, 19)",
-        "circle-radius": 3.5,
-        "circle-stroke-color": "rgb(178, 223, 138)",
+        "circle-color": [
+          "case",
+          ["==", ["get", "ford"], "yes"],
+          "rgb(89, 132, 151)",
+          "rgb(139, 69, 19)"
+        ],
+        "circle-radius": [
+          "case",
+          ["==", ["get", "highway"], "trailhead"],
+          4.5,
+          3.5
+        ],
+        "circle-stroke-color": [
+          "case",
+          ["==", ["get", "ford"], "yes"],
+          "rgb(148, 220, 251)",
+          "rgb(224, 224, 224)"
+        ],
         "circle-stroke-width": 1
       }
     },
@@ -1658,15 +1673,15 @@
         "icon-image": [
           "case",
           ["==", ["get", "amenity"], "toilets"],
-          "toilet-solid",
-          "landmark-solid"
+          "toilet-solid-2",
+          "landmark-solid-2"
         ],
         "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5]
       },
       "paint": {
-        "icon-color": "rgb(106, 91, 143)",
-        "icon-halo-color": "rgb(224, 224, 224)",
-        "icon-halo-width": 1
+        "icon-color": "rgb(250, 252, 251)",
+        "icon-halo-color": "gray",
+        "icon-halo-width": 2
       }
     },
     {

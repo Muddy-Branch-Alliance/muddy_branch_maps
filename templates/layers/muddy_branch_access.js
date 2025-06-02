@@ -5,10 +5,10 @@ module.exports.default = (context) => {
     "source": "muddy_branch_relation",
     "filter": ["==", "$type", "Point"],
     "paint": {
-      "circle-color": context.colors.trail_highzoom,
-      "circle-radius": 3.5,
+      "circle-color": ["case",["==",["get", "ford"], "yes"], context.colors.water_dark, context.colors.trail_highzoom],
+      "circle-radius": ["case",["==",["get", "highway"], "trailhead"], 4.5, 3.5],
       "circle-stroke-width": 1,
-      "circle-stroke-color": context.colors.other_vegetation,
+      "circle-stroke-color": ["case",["==",["get", "ford"], "yes"], context.colors.water_light, context.colors.halo],
     }
   };
   let overrides = {};
