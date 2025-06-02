@@ -1,5 +1,7 @@
 
-Welcome! This is a work-in-progress web map of the [Muddy Branch Greenway Trail](https://muddybranch.org/maps/). Click [here](https://mizmay.github.io/muddy_branch_maps/) to see a preview of the map.
+Welcome! This is a work-in-progress web map of the [Muddy Branch Greenway Trail](https://muddybranch.org/maps/). 
+- Click [here](https://mizmay.github.io/muddy_branch_maps/) to see a preview of the map.
+- Click [here](https://mizmay.github.io/muddy_branch_maps/muddy_branch_trail.html) for a preview of what the page this map is embedded in will look
 
 Here is a brief explanation of all of the underlying components this map relies on to render and display an intereactive map.
 
@@ -70,7 +72,8 @@ pmtiles extract https://build.protomaps.com/<LATEST_PLANET_FILE>.pmtiles muddy_b
 ## Deployment:
 
 1. Clone this repo
-2. Enable Github Pages in the new location
+3. Enable Github Pages in the new location
+4. Search and replace any hard-coded references to the original Github Pages hosting site (e.g. https://mizmay.github.io/) with the new domain
 
 
 ## Success Criteria
