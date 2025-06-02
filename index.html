@@ -57,7 +57,7 @@
                     const coordinates = e.lngLat
                     const properties = e.features[0].properties;
 
-                    let popup_info = '';
+                    let popup_info = properties.name;
                     let table_content = properties;
                     // select from this explicit list of properties:
                     const {surface, fee, changing_table, portable, unisex} = properties;
@@ -65,7 +65,6 @@
                         popup_info = popup_info ? popup_info : "Parking Lot";
                         // Show these properties for parking lots:
                         table_content = {surface, fee};
-                        popup_info = properties.name;
                     } else if (properties.amenity === "toilets") {
                         popup_info = popup_info ? popup_info : "Restroom";
                         // Show these properties for restrooms:
