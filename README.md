@@ -59,7 +59,7 @@ The _reference layers_ are everything on the map _not_ coming directly from the 
 
 [ REPLACE SOURCE AND DESCRIBE ]
 
-### Protomaps
+### Landcover, Roads, Labels, etc.
 
 Everything else was downloaded from (Protomaps)[https://docs.protomaps.com] and saved as `muddy_branch_area.pmtiles`. Should these layers ever become out-of-date and you need a more recent version, here's how to download and replace these layers:
 1. Follow the (Getting Started)[https://docs.protomaps.com/guide/getting-started] guide to install the CLI and find the latest daily planet file
