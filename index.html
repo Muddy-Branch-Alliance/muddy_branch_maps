@@ -67,7 +67,7 @@
                     // select from this explicit list of properties:
                     const {surface, fee, changing_table, portable, unisex} = properties;
                     if (properties.amenity === "parking") {
-                        popup_info = popup_info ? popup_info : "Parking Lot";
+                        popup_info = popup_info ? popup_info : "Parking";
                         // Show these properties for parking lots:
                         table_content = {surface, fee};
                     } else if (properties.amenity === "toilets") {
