@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-turbo",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2025-06-03T20:55:14Z",
+  "timestamp": "2025-06-03T21:57:14Z",
   "features": [
     {
       "type": "Feature",
@@ -8510,6 +8510,29 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/1777229434",
+        "access": "permissive",
+        "amenity": "parking",
+        "fee": "no",
+        "hiking": "yes",
+        "name": "Izaak Walton League main parking lot",
+        "operator": "Izaak Walton League of America",
+        "operator:type": "ngo",
+        "parking": "surface",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.2207692,
+          39.1213026
+        ]
+      },
+      "id": "node/1777229434"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/2008601014",
         "access": "yes",
         "fee": "no",
@@ -8696,6 +8719,29 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/9352866192",
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "hiking": "yes",
+        "name": "Blockhouse Point Conservation Park big parking lot",
+        "operator": "Montgomery County Parks",
+        "operator:type": "government",
+        "parking": "surface",
+        "surface": "unpaved"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.3047784,
+          39.0659395
+        ]
+      },
+      "id": "node/9352866192"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/10075095355",
         "ford": "yes"
       },
@@ -8762,6 +8808,72 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/12611257481",
+        "amenity": "parking",
+        "fee": "no",
+        "hiking": "yes",
+        "name": "Potomac Horse Center parking lot",
+        "operator": "Montgomery County Parks",
+        "operator:type": "government",
+        "parking": "surface",
+        "surface": "unpaved"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.2496609,
+          39.0897333
+        ]
+      },
+      "id": "node/12611257481"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12611257482",
+        "access": "permissive",
+        "amenity": "parking",
+        "fee": "no",
+        "hiking": "yes",
+        "name": "Izaak Walton League gravel parking lot",
+        "operator": "Izaak Walton League of America",
+        "operator:type": "ngo",
+        "parking": "surface",
+        "surface": "unpaved"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.2174222,
+          39.1208723
+        ]
+      },
+      "id": "node/12611257482"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12648004925",
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "hiking": "yes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "surface": "paved"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.23486,
+          39.1065009
+        ]
+      },
+      "id": "node/12648004925"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/12648004926",
         "access": "yes",
         "bicycle": "yes",
@@ -8782,6 +8894,21 @@
         ]
       },
       "id": "node/12648004926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12804701351",
+        "highway": "trailhead"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.2866114,
+          39.073919
+        ]
+      },
+      "id": "node/12804701351"
     }
   ]
 }

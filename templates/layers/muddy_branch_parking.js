@@ -3,7 +3,7 @@ module.exports.default = (context) => {
     "id": "muddy_branch_parking",
     "type": "symbol",
     "source": "muddy_branch_relation",
-    "filter": ["all",["==", "$type", "Polygon"],["==", "amenity", "parking"]],
+    "filter": ["==", "amenity", "parking"],
     "layout": {
       "icon-image": "p-circle",
       "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5],

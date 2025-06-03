@@ -20,19 +20,24 @@ Once updated, your changes will show up on the Muddy Branch Trail map automatica
 /* Muddy Branch Greenway Trail */
 [out:json][timeout:25];
 
-// Select relation
-relation(18728360);
+// Store the relation
+rel(18728360)->.rel;
 
-// Recursively fetch all nodes and ways (including nested relations)
+// Get member ways and their nodes
 (
-  way(r);
-);
+  way(r.rel);
+  node(w); // nodes of the ways
+)->.ways_and_nodes;
 
-// Output all data with tags and geometry
-(._;>;);
+// Get member nodes that are *direct* members of the relation
+node(r.rel)->.standalone_nodes;
+
+// Combine all
+(
+  .ways_and_nodes;
+  .standalone_nodes;
+);
 out body;
->;
-out skel qt;
 ```
 
 2. Hit download, select GeoJSON, and save to your local drive.

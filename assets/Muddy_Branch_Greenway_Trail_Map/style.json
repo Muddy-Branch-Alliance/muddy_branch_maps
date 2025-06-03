@@ -1688,11 +1688,7 @@
       "id": "muddy_branch_parking",
       "type": "symbol",
       "source": "muddy_branch_relation",
-      "filter": [
-        "all",
-        ["==", "$type", "Polygon"],
-        ["==", "amenity", "parking"]
-      ],
+      "filter": ["==", "amenity", "parking"],
       "layout": {
         "icon-allow-overlap": true,
         "icon-ignore-placement": true,
