@@ -45,11 +45,16 @@
                     style: "./assets/Muddy_Branch_Greenway_Trail_Map/style.json",
                     attributionControl: false,
                 });
+
                 map.setMaxZoom(18);
                 map.setMinZoom(10);
 
                 map.addControl(new maplibregl.AttributionControl({compact: true}));
                 map.addControl(new maplibregl.NavigationControl(), 'top-right');
+                map.addControl(new maplibregl.ScaleControl({
+                    maxWidth: 120,
+                    unit: 'imperial'
+                }),'top-left');
 
                 // When a click event occurs on an access point icon, open a popup at the
                 // location of the feature, with description HTML from its properties.
