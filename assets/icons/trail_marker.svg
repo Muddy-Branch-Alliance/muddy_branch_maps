@@ -1,0 +1,12 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="8" cy="8" r="8" fill="#dc3545"/>
+  
+  <!-- Trail post -->
+  <rect x="7.5" y="3" width="1" height="10" fill="white"/>
+  
+  <!-- Trail markers/blazes -->
+  <rect x="4" y="5" width="3" height="1.5" rx="0.3" fill="white"/>
+  <rect x="9" y="7" width="3" height="1.5" rx="0.3" fill="white"/>
+  <rect x="4" y="9" width="3" height="1.5" rx="0.3" fill="white"/>
+</svg>
