@@ -34,6 +34,7 @@
 
             let PMTILES_URL = "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_area.pmtiles";
             const p = new pmtiles.PMTiles(PMTILES_URL);
+            const clickable_layers = ['muddy_branch_parking','muddy_branch_landmark'];
             pm.add(p);
 
             p.getHeader().then(h => {
@@ -58,7 +59,7 @@
 
                 // When a click event occurs on an access point icon, open a popup at the
                 // location of the feature, with description HTML from its properties.
-                map.on('click', ['muddy_branch_parking','muddy_branch_landmark'], (e) => {
+                map.on('click', clickable_layers, (e) => {
                     const coordinates = e.lngLat
                     const properties = e.features[0].properties;
 
@@ -90,12 +91,12 @@
                     });
 
                 // Change the cursor to a pointer when the mouse is over the places layer.
-                map.on('mouseenter', 'muddy_branch_access', () => {
+                map.on('mouseenter', clickable_layers, () => {
                     map.getCanvas().style.cursor = 'pointer';
                 });
 
                 // Change it back to a pointer when it leaves.
-                map.on('mouseleave', 'muddy_branch_access', () => {
+                map.on('mouseleave', clickable_layers, () => {
                     map.getCanvas().style.cursor = '';
                 });
             });
