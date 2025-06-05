@@ -21,11 +21,10 @@ module.exports.context = {
     waterLabel: 'rgb(66, 99, 115)',
     trailLabel: 'rgb(12, 40, 11)',
     greenspaceLabel: 'rgb(25, 80, 22)',
-    otherLabel: 'rgb(106, 91, 143)',
-    serviceIcon: 'rgb(0, 0, 255)',
+    otherLabel: 'rgb(106, 91, 143)'
   },
   settings: {
-    iconSize: ["interpolate", ["exponential", 1], ["zoom"], 13, 0.8, 16, 1, 18, 1.2],
+    iconSize: ["interpolate", ["exponential", 1], ["zoom"], 10, 1, 16, 1, 18, 1.2],
     iconLabelFont: ["Noto Sans Regular"],
     iconLabelFontSize: ["interpolate", ["exponential", 0.7], ["zoom"], 13, 11, 18, 12],
     iconLabelAnchors: ["left", "right", "bottom"],
@@ -124,8 +123,9 @@ module.exports.template = {
     "places_locality",
     "muddy_branch_ford",
     "muddy_branch_access",
-    "muddy_branch_landmark",
-    "muddy_branch_parking"
+    "muddy_branch_toilet",
+    "muddy_branch_parking",
+    "muddy_branch_end"
   ],
   "id": "h7f7a74"
 };

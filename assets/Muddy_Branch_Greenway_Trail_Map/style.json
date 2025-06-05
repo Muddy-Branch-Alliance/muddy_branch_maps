@@ -1645,8 +1645,8 @@
           "interpolate",
           ["exponential", 1],
           ["zoom"],
-          13,
-          0.8,
+          10,
+          1,
           16,
           1,
           18,
@@ -1701,8 +1701,8 @@
           "interpolate",
           ["exponential", 1],
           ["zoom"],
-          13,
-          0.8,
+          10,
+          1,
           16,
           1,
           18,
@@ -1745,34 +1745,11 @@
       }
     },
     {
-      "id": "muddy_branch_landmark",
+      "id": "muddy_branch_toilet",
       "type": "symbol",
       "source": "muddy_branch_relation",
-      "filter": [
-        "all",
-        ["==", "$type", "Polygon"],
-        ["!=", "amenity", "parking"]
-      ],
-      "layout": {
-        "icon-image": [
-          "case",
-          ["==", ["get", "amenity"], "toilets"],
-          "outhouse",
-          "finish_flag2"
-        ],
-        "icon-size": [
-          "interpolate",
-          ["exponential", 1],
-          ["zoom"],
-          13,
-          0.8,
-          16,
-          1,
-          18,
-          1.2
-        ],
-        "text-field": ["step", ["zoom"], "", 16, "Stream Crossing"]
-      }
+      "filter": ["==", ["get", "amenity"], "toilets"],
+      "layout": {"icon-image": "toilet", "icon-size": 1}
     },
     {
       "id": "muddy_branch_parking",
@@ -1785,8 +1762,29 @@
           "interpolate",
           ["exponential", 1],
           ["zoom"],
-          13,
-          0.8,
+          10,
+          1,
+          16,
+          1,
+          18,
+          1.2
+        ]
+      }
+    },
+    {
+      "id": "muddy_branch_end",
+      "type": "symbol",
+      "source": "muddy_branch_relation",
+      "minzoom": 10,
+      "filter": ["==", ["get", "@id"], "way/411222691"],
+      "layout": {
+        "icon-image": "finish_flag2",
+        "icon-size": [
+          "interpolate",
+          ["exponential", 1],
+          ["zoom"],
+          10,
+          0.6,
           16,
           1,
           18,
