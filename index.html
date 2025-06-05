@@ -34,7 +34,7 @@
 
             let PMTILES_URL = "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_area.pmtiles";
             const p = new pmtiles.PMTiles(PMTILES_URL);
-            const clickable_layers = ['muddy_branch_parking','muddy_branch_landmark'];
+            const clickable_layers = ['muddy_branch_parking','muddy_branch_end','muddy_branch_toilet'];
             pm.add(p);
 
             p.getHeader().then(h => {
@@ -66,23 +66,24 @@
                     let popup_info = properties.name;
                     let table_content = properties;
                     // select from this explicit list of properties:
-                    const {surface, fee, changing_table, portable, unisex} = properties;
                     if (properties.amenity === "parking") {
                         popup_info = popup_info ? popup_info : "Parking";
+                        popup_info = "<h3 class='custom-popup'>" + popup_info + "</h3>";
                         // Show these properties for parking lots:
-                        table_content = {surface, fee};
+                        popup_info += "<br><b>Surface</b>: " + properties.surface;
+                        popup_info += properties.fee == 'yes' ? "<p>Fee required</p>" : "<p>No fee required</p>";
                     } else if (properties.amenity === "toilets") {
-                        popup_info = popup_info ? popup_info : "Restroom";
+                        popup_info = popup_info ? popup_info : "Toilets";
+                        popup_info = "<h3 class='custom-popup'>" + popup_info + "</h3>";
                         // Show these properties for restrooms:
-                        table_content = {changing_table, portable, unisex}
+                        popup_info += "<br><b>Changing Table</b>: " + properties.changing_table;
+                        popup_info += "<br><b>Portable</b>: " + properties.portable;
+                        popup_info += "<br><b>Unisex</b>: " + properties.unisex;
+                    } else {
+                        popup_info = popup_info ? popup_info : "Landmark";
+                        popup_info = "<h3 class='custom-popup'>" + popup_info + "</h3>";
+                        popup_info += properties.website ? "<a href='" + properties.website + "' target='_blank'><b>Website</b></a>" : "";
                     };
-
-                    popup_info = "<h3 class='custom-popup'>" + popup_info + "</h3>";
-                    popup_info += "<table id='popup' class='popup_table'>";
-                    for (let x in table_content) {
-                        popup_info += "<tr><td>" + x + "</td><td>" + properties[x] + "</td></tr>";
-                    }
-                    popup_info +="</table>";
                 
                     new maplibregl.Popup()
                         .setLngLat(coordinates)
