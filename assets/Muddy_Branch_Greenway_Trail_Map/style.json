@@ -1666,7 +1666,7 @@
           18,
           12
         ],
-        "text-variable-anchor": ["bottom"],
+        "text-variable-anchor": ["left", "right", "bottom"],
         "text-variable-anchor-offset": [
           "interpolate",
           ["exponential", 1.7],
@@ -1757,10 +1757,21 @@
         "icon-image": [
           "case",
           ["==", ["get", "amenity"], "toilets"],
-          "outhouse",
-          "finish_flag1"
+          "toilet",
+          "finish_flag2"
         ],
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5]
+        "icon-size": [
+          "interpolate",
+          ["exponential", 1],
+          ["zoom"],
+          13,
+          1,
+          16,
+          1.2,
+          18,
+          1.5
+        ],
+        "text-field": ["step", ["zoom"], "", 16, "Stream Crossing"]
       }
     },
     {
