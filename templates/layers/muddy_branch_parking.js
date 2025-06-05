@@ -10,11 +10,6 @@ module.exports.default = (context) => {
       "icon-allow-overlap": true,
       "icon-ignore-placement": true
     },
-    "paint": {
-      "icon-color": context.colors.serviceIcon,
-      "icon-halo-color": context.colors.halo,
-      "icon-halo-width": 1,
-    }
   };
   let overrides = {};
 

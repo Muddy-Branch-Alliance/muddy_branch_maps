@@ -111,6 +111,7 @@ module.exports.template = {
     "pois",
     "places_subplace",
     "places_locality",
+    "muddy_branch_ford",
     "muddy_branch_access",
     "muddy_branch_landmark",
     "muddy_branch_parking"
