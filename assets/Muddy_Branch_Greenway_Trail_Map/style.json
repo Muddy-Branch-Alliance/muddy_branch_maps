@@ -1782,7 +1782,7 @@
       "layout": {
         "icon-allow-overlap": true,
         "icon-ignore-placement": true,
-        "icon-image": "p-circle",
+        "icon-image": "parking",
         "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5]
       }
     }

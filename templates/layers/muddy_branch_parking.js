@@ -5,7 +5,7 @@ module.exports.default = (context) => {
     "source": "muddy_branch_relation",
     "filter": ["==", "amenity", "parking"],
     "layout": {
-      "icon-image": "p-circle",
+      "icon-image": "parking",
       "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5],
       "icon-allow-overlap": true,
       "icon-ignore-placement": true
