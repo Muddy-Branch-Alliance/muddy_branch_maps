@@ -4,9 +4,9 @@ module.exports.default = (context) => {
     "type": "symbol",
     "source": "muddy_branch_relation",
     "filter": ["==", ["get", "highway"], "trailhead"],
+    "minzoom": 13,
     "layout": {
       "icon-image": "trailhead",
-      "icon-allow-overlap": true,
       "text-field": ["step", ["zoom"], "", 15, "Trailhead"],
       "icon-size": context.settings.iconSize,
       "text-font": context.settings.iconLabelFont,

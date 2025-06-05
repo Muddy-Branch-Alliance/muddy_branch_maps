@@ -1693,9 +1693,9 @@
       "id": "muddy_branch_access",
       "type": "symbol",
       "source": "muddy_branch_relation",
+      "minzoom": 13,
       "filter": ["==", ["get", "highway"], "trailhead"],
       "layout": {
-        "icon-allow-overlap": true,
         "icon-image": "trailhead",
         "icon-size": [
           "interpolate",
@@ -1781,7 +1781,6 @@
       "filter": ["==", "amenity", "parking"],
       "layout": {
         "icon-allow-overlap": true,
-        "icon-ignore-placement": true,
         "icon-image": "parking",
         "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5]
       }
