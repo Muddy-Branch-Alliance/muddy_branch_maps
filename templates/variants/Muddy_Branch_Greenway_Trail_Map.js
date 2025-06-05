@@ -30,7 +30,7 @@ module.exports.context = {
     iconLabelFontSize: ["interpolate", ["exponential", 0.7], ["zoom"], 13, 11, 18, 12],
     iconLabelAnchors: ["left", "right", "bottom"],
     iconLabelAnchorOffsets: ["interpolate", ["exponential", 1.7], ["zoom"],
-        12, ["literal",["left", [0.6, 0], "right", [-0.6, 0], "bottom", [0, 0.6]]],
+        12, ["literal",["left", [0.7, 0], "right", [-0.7, 0], "bottom", [0, 0.7]]],
         20, ["literal",["left", [1.2, 0], "right", [-1.2, 0], "bottom", [0, 1.2]]]
       ],
     iconTextPadding: 2

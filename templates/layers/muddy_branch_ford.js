@@ -7,9 +7,19 @@ module.exports.default = (context) => {
     "minzoom": 15,
     "layout": {
       "icon-image": "ford2",
-      "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.5, 18, 2],
-      "icon-allow-overlap": true,
-      "icon-ignore-placement": true
+      "text-field": ["step", ["zoom"], "", 16, "Stream Crossing"],
+      "icon-size": context.settings.iconSize,
+      "text-font": context.settings.iconLabelFont,
+      "text-size": context.settings.iconLabelFontSize,
+      "text-justify": "auto",
+      "text-variable-anchor": context.settings.iconLabelAnchors,
+      "text-variable-anchor-offset": context.settings.iconLabelAnchorOffsets,
+      "text-padding": context.settings.iconTextPadding,
+      "text-max-width": 6,
+    }, "paint": {
+      "text-color": context.colors.trailLabel,
+      "text-halo-color": context.colors.other_vegetation,
+      "text-halo-width": 1,
     }
   };
   let overrides = {};

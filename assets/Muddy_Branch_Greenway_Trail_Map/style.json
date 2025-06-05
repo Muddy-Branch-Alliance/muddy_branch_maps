@@ -1640,10 +1640,53 @@
       "minzoom": 15,
       "filter": ["==", ["get", "ford"], "yes"],
       "layout": {
-        "icon-allow-overlap": true,
-        "icon-ignore-placement": true,
         "icon-image": "ford2",
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 15, 0.5, 18, 2]
+        "icon-size": [
+          "interpolate",
+          ["exponential", 1],
+          ["zoom"],
+          13,
+          0.8,
+          16,
+          1,
+          18,
+          1.2
+        ],
+        "text-field": ["step", ["zoom"], "", 16, "Stream Crossing"],
+        "text-font": ["Noto Sans Regular"],
+        "text-justify": "auto",
+        "text-max-width": 6,
+        "text-padding": 2,
+        "text-size": [
+          "interpolate",
+          ["exponential", 0.7],
+          ["zoom"],
+          13,
+          11,
+          18,
+          12
+        ],
+        "text-variable-anchor": ["bottom"],
+        "text-variable-anchor-offset": [
+          "interpolate",
+          ["exponential", 1.7],
+          ["zoom"],
+          12,
+          [
+            "literal",
+            ["left", [0.7, 0], "right", [-0.7, 0], "bottom", [0, 0.7]]
+          ],
+          20,
+          [
+            "literal",
+            ["left", [1.2, 0], "right", [-1.2, 0], "bottom", [0, 1.2]]
+          ]
+        ]
+      },
+      "paint": {
+        "text-color": "rgb(12, 40, 11)",
+        "text-halo-color": "rgb(178, 223, 138)",
+        "text-halo-width": 1
       }
     },
     {
@@ -1686,7 +1729,7 @@
           12,
           [
             "literal",
-            ["left", [0.6, 0], "right", [-0.6, 0], "bottom", [0, 0.6]]
+            ["left", [0.7, 0], "right", [-0.7, 0], "bottom", [0, 0.7]]
           ],
           20,
           [
