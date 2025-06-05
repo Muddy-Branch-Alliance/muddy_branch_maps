@@ -3,13 +3,13 @@
 <circle cx="8.5" cy="8.5" r="7" fill="#D9D9D9" stroke="black"/>
 </mask>
 <g mask="url(#mask0_3_53)">
-<path d="M9 2L7 14" stroke="black" stroke-dasharray="3 1"/>
+<circle cx="8.5" cy="8.5" r="7" fill="#94DCFB" stroke="#426373"/>
+<path d="M9 2L7 14" stroke="#426373" stroke-dasharray="3 1"/>
 <g filter="url(#filter0_d_3_53)">
-<path d="M11 3L9 15" stroke="black" stroke-dasharray="3 1"/>
+<path d="M11 3L9 15" stroke="#426373" stroke-dasharray="3 1"/>
 </g>
-<path d="M0 6.95448C3.5 8.28619 4.5 8.28619 8 6.95448C11.5 5.62277 12.8697 5.74231 16 6.95448" stroke="black" stroke-width="2"/>
-<path d="M0 10.9545C3.5 12.2862 4.5 12.2862 8 10.9545C11.5 9.62277 12.8697 9.74231 16 10.9545" stroke="black" stroke-width="2"/>
-<circle cx="8.5" cy="8.5" r="7" stroke="black"/>
+<path d="M0 6.95448C3.5 8.28619 4.5 8.28619 8 6.95448C11.5 5.62277 12.8697 5.74231 16 6.95448" stroke="#426373" stroke-width="2"/>
+<path d="M0 10.9545C3.5 12.2862 4.5 12.2862 8 10.9545C11.5 9.62277 12.8697 9.74231 16 10.9545" stroke="#426373" stroke-width="2"/>
 </g>
 <defs>
 <filter id="filter0_d_3_53" x="4.50681" y="2.91779" width="10.9864" height="20.1644" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
