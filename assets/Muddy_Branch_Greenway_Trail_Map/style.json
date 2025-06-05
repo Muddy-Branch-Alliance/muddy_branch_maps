@@ -1656,16 +1656,16 @@
         "icon-image": "trailhead",
         "icon-size": [
           "interpolate",
-          ["linear"],
+          ["exponential", 1],
           ["zoom"],
           13,
           0.8,
           16,
-          1.2,
+          1,
           18,
-          2
+          1.2
         ],
-        "text-field": "Trailhead",
+        "text-field": ["step", ["zoom"], "", 15, "Trailhead"],
         "text-font": ["Noto Sans Regular"],
         "text-justify": "auto",
         "text-padding": 2,
@@ -1674,49 +1674,31 @@
           ["exponential", 0.7],
           ["zoom"],
           13,
-          12,
+          11,
           18,
-          14
+          12
         ],
-        "text-variable-anchor": ["left", "right", "bottom", "top"],
+        "text-variable-anchor": ["left", "right", "bottom"],
         "text-variable-anchor-offset": [
           "interpolate",
-          ["linear"],
+          ["exponential", 1.7],
           ["zoom"],
-          13,
+          12,
           [
             "literal",
-            [
-              "left",
-              [0.5, 0],
-              "right",
-              [-0.5, 0],
-              "bottom",
-              [0, 0.5],
-              "top",
-              [0, 0.5]
-            ]
+            ["left", [0.6, 0], "right", [-0.6, 0], "bottom", [0, 0.6]]
           ],
-          16,
+          20,
           [
             "literal",
-            ["left", [1, 0], "right", [-1, 0], "bottom", [0, 1], "top", [0, 1]]
-          ],
-          18,
-          [
-            "literal",
-            [
-              "left",
-              [1.2, 0],
-              "right",
-              [-1.2, 0],
-              "bottom",
-              [0, 1.2],
-              "top",
-              [0, 1.2]
-            ]
+            ["left", [1.2, 0], "right", [-1.2, 0], "bottom", [0, 1.2]]
           ]
         ]
+      },
+      "paint": {
+        "text-color": "rgb(12, 40, 11)",
+        "text-halo-color": "rgb(178, 223, 138)",
+        "text-halo-width": 1
       }
     },
     {
