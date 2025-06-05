@@ -6,8 +6,7 @@ module.exports.default = (context) => {
     "filter": ["==", "amenity", "parking"],
     "layout": {
       "icon-image": "p-circle",
-      "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5],
-      "icon-allow-overlap": true
+      "icon-size": context.settings.iconSize,
     },
   };
   let overrides = {};
