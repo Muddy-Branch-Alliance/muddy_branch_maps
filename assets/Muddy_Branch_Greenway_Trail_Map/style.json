@@ -1781,7 +1781,7 @@
       "filter": ["==", "amenity", "parking"],
       "layout": {
         "icon-allow-overlap": true,
-        "icon-image": "parking",
+        "icon-image": "p-circle",
         "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 1, 16, 1.5]
       }
     }
