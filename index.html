@@ -58,7 +58,7 @@
 
                 // When a click event occurs on an access point icon, open a popup at the
                 // location of the feature, with description HTML from its properties.
-                map.on('click', ['muddy_branch_access','muddy_branch_parking','muddy_branch_landmark'], (e) => {
+                map.on('click', ['muddy_branch_parking','muddy_branch_landmark'], (e) => {
                     const coordinates = e.lngLat
                     const properties = e.features[0].properties;
 
