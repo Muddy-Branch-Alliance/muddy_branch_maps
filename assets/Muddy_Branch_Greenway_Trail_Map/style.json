@@ -12,7 +12,7 @@
       "data": "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_relation.geojson",
       "attribution": "© <a href=\"https://openstreetmap.org\">OpenStreetMap</a>"
     },
-    "montgomery_county_dem": {
+    "hillshade": {
       "type": "raster-dem",
       "encoding": "terrarium",
       "url": "https://tiles.stadiamaps.com/data/terrarium.json",
@@ -44,7 +44,7 @@
     {
       "id": "hillshade",
       "type": "hillshade",
-      "source": "montgomery_county_dem",
+      "source": "hillshade",
       "paint": {
         "hillshade-accent-color": "#000000",
         "hillshade-exaggeration": 0.5,

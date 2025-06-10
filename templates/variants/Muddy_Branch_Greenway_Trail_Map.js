@@ -50,7 +50,7 @@ module.exports.template = {
       "data": "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_relation.geojson",
       "attribution": "© <a href=\"https://openstreetmap.org\">OpenStreetMap</a>"
     },
-    "montgomery_county_dem": {
+    "hillshade": {
       "type": "raster-dem",
       "encoding": "terrarium",
       "url": "https://tiles.stadiamaps.com/data/terrarium.json",

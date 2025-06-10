@@ -2,7 +2,7 @@ module.exports.default = (context) => {
   const baseStyle = {
     "id": "hillshade",
     "type": "hillshade",
-    "source": "montgomery_county_dem",
+    "source": "hillshade",
     "paint": {
       "hillshade-method": "igor",
       "hillshade-illumination-altitude": 45,
