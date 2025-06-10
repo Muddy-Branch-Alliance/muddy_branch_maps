@@ -6,8 +6,8 @@ module.exports.default = (context) => {
     "minzoom": 10,
     "filter": ["==",["get", "@id"], "way/411222691"],
     "layout": {
-      "icon-image": "finish_flag2",
-      "icon-size": ["interpolate", ["exponential", 1], ["zoom"], 10, 0.6, 16, 1, 18, 1.2]
+      "icon-image": "finish_flag1",
+      "icon-size": context.settings.iconSizeMarkers,
     }
   };
   let overrides = {};

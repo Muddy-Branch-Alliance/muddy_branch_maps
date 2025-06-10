@@ -1640,16 +1640,16 @@
       "minzoom": 15,
       "filter": ["==", ["get", "ford"], "yes"],
       "layout": {
-        "icon-image": "ford2",
+        "icon-image": "ford3",
         "icon-size": [
           "interpolate",
           ["exponential", 1],
           ["zoom"],
-          10,
+          13,
           0.5,
-          16,
-          1,
           18,
+          0.8,
+          20,
           1
         ],
         "text-field": ["step", ["zoom"], "", 16, "Stream Crossing"],
@@ -1696,16 +1696,16 @@
       "minzoom": 13,
       "filter": ["==", ["get", "highway"], "trailhead"],
       "layout": {
-        "icon-image": "trailhead",
+        "icon-image": "trail_compass",
         "icon-size": [
           "interpolate",
           ["exponential", 1],
           ["zoom"],
-          10,
+          13,
           0.5,
-          16,
-          1,
           18,
+          0.8,
+          20,
           1
         ],
         "text-field": ["step", ["zoom"], "", 15, "Trailhead"],
@@ -1750,7 +1750,7 @@
       "source": "muddy_branch_relation",
       "filter": ["==", ["get", "amenity"], "toilets"],
       "layout": {
-        "icon-image": "outhouse",
+        "icon-image": "toilet",
         "icon-size": [
           "interpolate",
           ["exponential", 1],
@@ -1758,7 +1758,7 @@
           10,
           0.5,
           16,
-          1,
+          0.7,
           18,
           1
         ]
@@ -1778,7 +1778,7 @@
           10,
           0.5,
           16,
-          1,
+          0.7,
           18,
           1
         ]
@@ -1791,15 +1791,15 @@
       "minzoom": 10,
       "filter": ["==", ["get", "@id"], "way/411222691"],
       "layout": {
-        "icon-image": "finish_flag2",
+        "icon-image": "finish_flag1",
         "icon-size": [
           "interpolate",
           ["exponential", 1],
           ["zoom"],
           10,
-          0.6,
+          0.7,
           16,
-          1,
+          0.8,
           18,
           1.2
         ]

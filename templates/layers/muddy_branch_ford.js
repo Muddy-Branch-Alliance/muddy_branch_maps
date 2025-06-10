@@ -6,9 +6,9 @@ module.exports.default = (context) => {
     "filter": ["==",["get", "ford"], "yes"],
     "minzoom": 15,
     "layout": {
-      "icon-image": "ford2",
+      "icon-image": "ford3",
       "text-field": ["step", ["zoom"], "", 16, "Stream Crossing"],
-      "icon-size": context.settings.iconSize,
+      "icon-size": context.settings.iconSizeTrail,
       "text-font": context.settings.iconLabelFont,
       "text-size": context.settings.iconLabelFontSize,
       "text-justify": "auto",
