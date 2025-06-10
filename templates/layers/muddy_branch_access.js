@@ -6,7 +6,7 @@ module.exports.default = (context) => {
     "filter": ["==", ["get", "highway"], "trailhead"],
     "minzoom": 13,
     "layout": {
-      "icon-image": "trail_compass",
+      "icon-image": "trailhead",
       "text-field": ["step", ["zoom"], "", 15, "Trailhead"],
       "icon-size": context.settings.iconSizeTrail,
       "text-font": context.settings.iconLabelFont,

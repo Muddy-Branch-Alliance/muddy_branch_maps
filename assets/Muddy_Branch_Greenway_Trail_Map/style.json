@@ -1696,7 +1696,7 @@
       "minzoom": 13,
       "filter": ["==", ["get", "highway"], "trailhead"],
       "layout": {
-        "icon-image": "trail_compass",
+        "icon-image": "trailhead",
         "icon-size": [
           "interpolate",
           ["exponential", 1],
@@ -1750,7 +1750,7 @@
       "source": "muddy_branch_relation",
       "filter": ["==", ["get", "amenity"], "toilets"],
       "layout": {
-        "icon-image": "toilet",
+        "icon-image": "outhouse",
         "icon-size": [
           "interpolate",
           ["exponential", 1],

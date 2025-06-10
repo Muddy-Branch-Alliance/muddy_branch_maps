@@ -5,7 +5,7 @@ module.exports.default = (context) => {
     "source": "muddy_branch_relation",
     "filter": ["==",["get", "amenity"], "toilets"],
     "layout": {
-      "icon-image": "toilet",
+      "icon-image": "outhouse",
       "icon-size": context.settings.iconSizeAmenities,
     }
   };
