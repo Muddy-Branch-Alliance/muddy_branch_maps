@@ -24,7 +24,7 @@ module.exports.context = {
     otherLabel: 'rgb(106, 91, 143)'
   },
   settings: {
-    iconSize: ["interpolate", ["exponential", 1], ["zoom"], 10, 1, 16, 1, 18, 1.2],
+    iconSize: ["interpolate", ["exponential", 1], ["zoom"], 10, 0.5, 16, 1, 18, 1],
     iconLabelFont: ["Noto Sans Regular"],
     iconLabelFontSize: ["interpolate", ["exponential", 0.7], ["zoom"], 13, 11, 18, 12],
     iconLabelAnchors: ["left", "right", "bottom"],

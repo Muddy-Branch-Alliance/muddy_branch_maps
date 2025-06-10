@@ -1646,11 +1646,11 @@
           ["exponential", 1],
           ["zoom"],
           10,
-          1,
+          0.5,
           16,
           1,
           18,
-          1.2
+          1
         ],
         "text-field": ["step", ["zoom"], "", 16, "Stream Crossing"],
         "text-font": ["Noto Sans Regular"],
@@ -1702,11 +1702,11 @@
           ["exponential", 1],
           ["zoom"],
           10,
-          1,
+          0.5,
           16,
           1,
           18,
-          1.2
+          1
         ],
         "text-field": ["step", ["zoom"], "", 15, "Trailhead"],
         "text-font": ["Noto Sans Regular"],
@@ -1749,7 +1749,20 @@
       "type": "symbol",
       "source": "muddy_branch_relation",
       "filter": ["==", ["get", "amenity"], "toilets"],
-      "layout": {"icon-image": "toilet", "icon-size": 1}
+      "layout": {
+        "icon-image": "outhouse",
+        "icon-size": [
+          "interpolate",
+          ["exponential", 1],
+          ["zoom"],
+          10,
+          0.5,
+          16,
+          1,
+          18,
+          1
+        ]
+      }
     },
     {
       "id": "muddy_branch_parking",
@@ -1763,11 +1776,11 @@
           ["exponential", 1],
           ["zoom"],
           10,
-          1,
+          0.5,
           16,
           1,
           18,
-          1.2
+          1
         ]
       }
     },
