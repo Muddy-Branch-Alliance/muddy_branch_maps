@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-turbo",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2025-06-03T21:57:14Z",
+  "timestamp": "2025-06-10T18:11:26Z",
   "features": [
     {
       "type": "Feature",
@@ -12,6 +12,7 @@
         "amenity": "parking",
         "fee": "no",
         "hiking": "yes",
+        "name": "Izaak Walton League gravel parking lot",
         "operator": "Izaak Walton League of America",
         "operator:type": "ngo",
         "parking": "surface",
@@ -53,6 +54,7 @@
         "amenity": "parking",
         "fee": "no",
         "hiking": "yes",
+        "name": "Potomac Horse Center parking lot",
         "operator": "Montgomery County Parks",
         "operator:type": "government",
         "parking": "surface",
@@ -330,6 +332,7 @@
         "capacity": "25",
         "fee": "no",
         "hiking": "yes",
+        "name": "Blockhouse Point Conservation Park big parking lot",
         "note": "Park info says 2 or 3 horse trailers",
         "operator": "Montgomery County Parks",
         "operator:type": "government",
@@ -383,24 +386,24 @@
         "coordinates": [
           [
             [
-              -77.2902554,
-              39.0550031
+              -77.2902465,
+              39.0550072
             ],
             [
-              -77.2902392,
-              39.0550126
+              -77.2902374,
+              39.0550193
             ],
             [
-              -77.2902557,
-              39.0550295
+              -77.2902638,
+              39.0550312
             ],
             [
-              -77.2902719,
-              39.05502
+              -77.2902729,
+              39.055019
             ],
             [
-              -77.2902554,
-              39.0550031
+              -77.2902465,
+              39.0550072
             ]
           ]
         ]
@@ -415,6 +418,7 @@
         "amenity": "parking",
         "fee": "no",
         "hiking": "yes",
+        "name": "Izaak Walton League main parking lot",
         "operator": "Izaak Walton League of America",
         "operator:type": "ngo",
         "parking": "surface",
@@ -8515,7 +8519,6 @@
         "amenity": "parking",
         "fee": "no",
         "hiking": "yes",
-        "name": "Izaak Walton League main parking lot",
         "operator": "Izaak Walton League of America",
         "operator:type": "ngo",
         "parking": "surface",
@@ -8724,7 +8727,6 @@
         "amenity": "parking",
         "fee": "no",
         "hiking": "yes",
-        "name": "Blockhouse Point Conservation Park big parking lot",
         "operator": "Montgomery County Parks",
         "operator:type": "government",
         "parking": "surface",
@@ -8758,7 +8760,8 @@
       "type": "Feature",
       "properties": {
         "@id": "node/10207501943",
-        "barrier": "gate"
+        "barrier": "gate",
+        "locked": "no"
       },
       "geometry": {
         "type": "Point",
@@ -8812,7 +8815,6 @@
         "amenity": "parking",
         "fee": "no",
         "hiking": "yes",
-        "name": "Potomac Horse Center parking lot",
         "operator": "Montgomery County Parks",
         "operator:type": "government",
         "parking": "surface",
@@ -8835,7 +8837,6 @@
         "amenity": "parking",
         "fee": "no",
         "hiking": "yes",
-        "name": "Izaak Walton League gravel parking lot",
         "operator": "Izaak Walton League of America",
         "operator:type": "ngo",
         "parking": "surface",
@@ -8909,6 +8910,27 @@
         ]
       },
       "id": "node/12804701351"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12884947160",
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "hiking": "yes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.203168,
+          39.1241812
+        ]
+      },
+      "id": "node/12884947160"
     }
   ]
 }
