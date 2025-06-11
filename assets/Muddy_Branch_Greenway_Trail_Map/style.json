@@ -1640,7 +1640,7 @@
       "minzoom": 15,
       "filter": ["==", ["get", "ford"], "yes"],
       "layout": {
-        "icon-image": "ford3",
+        "icon-image": "ford",
         "icon-size": [
           "interpolate",
           ["exponential", 1],
