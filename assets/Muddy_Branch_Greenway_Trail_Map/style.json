@@ -1643,9 +1643,11 @@
         "icon-image": "ford",
         "icon-size": [
           "interpolate",
-          ["exponential", 1],
+          ["linear"],
           ["zoom"],
           11,
+          0.5,
+          13,
           0.8,
           16,
           1
@@ -1697,9 +1699,11 @@
         "icon-image": "trailhead",
         "icon-size": [
           "interpolate",
-          ["exponential", 1],
+          ["linear"],
           ["zoom"],
           11,
+          0.5,
+          13,
           0.8,
           16,
           1
@@ -1747,15 +1751,7 @@
       "filter": ["==", ["get", "amenity"], "toilets"],
       "layout": {
         "icon-image": "outhouse",
-        "icon-size": [
-          "interpolate",
-          ["exponential", 1],
-          ["zoom"],
-          11,
-          0.5,
-          20,
-          1
-        ]
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 11, 0.8, 16, 1]
       }
     },
     {
@@ -1765,15 +1761,7 @@
       "filter": ["==", "amenity", "parking"],
       "layout": {
         "icon-image": "parking",
-        "icon-size": [
-          "interpolate",
-          ["exponential", 1],
-          ["zoom"],
-          11,
-          0.5,
-          20,
-          1
-        ]
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 11, 0.5, 16, 1]
       }
     },
     {
@@ -1784,17 +1772,7 @@
       "filter": ["==", ["get", "@id"], "way/411222691"],
       "layout": {
         "icon-image": "finish_flag",
-        "icon-size": [
-          "interpolate",
-          ["exponential", 1],
-          ["zoom"],
-          11,
-          0.8,
-          13,
-          1,
-          20,
-          1
-        ]
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 11, 0.8, 16, 1]
       }
     }
   ],

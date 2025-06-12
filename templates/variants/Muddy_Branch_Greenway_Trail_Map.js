@@ -24,9 +24,9 @@ module.exports.context = {
     otherLabel: 'rgb(106, 91, 143)'
   },
   settings: {
-    iconSizeMarkers: ["interpolate", ["exponential", 1], ["zoom"], 11, 0.8, 13, 1, 20, 1],
-    iconSizeAmenities: ["interpolate", ["exponential", 1], ["zoom"], 11, 0.5, 20, 1],
-    iconSizeTrail: ["interpolate", ["exponential", 1], ["zoom"], 11, 0.8, 16, 1],
+    iconSizeMarkers: ["interpolate", ["linear"], ["zoom"], 11, 0.8, 16, 1], // outhouse, finish flag
+    iconSizeAmenities: ["interpolate", ["linear"], ["zoom"], 11, 0.5, 16, 1], // parking
+    iconSizeTrail: ["interpolate", ["linear"], ["zoom"], 11, 0.5, 13, 0.8, 16, 1], // trailhead, ford
     iconLabelFont: ["Noto Sans Regular"],
     iconLabelFontSize: ["interpolate", ["exponential", 0.7], ["zoom"], 13, 11, 18, 12],
     iconLabelAnchors: ["left", "right", "bottom"],
