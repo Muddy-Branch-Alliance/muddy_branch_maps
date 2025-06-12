@@ -18,7 +18,7 @@ module.exports.default = (context) => {
       "text-size": ["interpolate", ["exponential",0.7], ["zoom"], 14, 12, 18, 14]
     },
     "paint": {
-      "text-color": context.colors.road_label_light,
+      "text-color": context.colors.roadLabelLight,
       "text-halo-color": context.colors.halo_light,
       "text-halo-width": 1
     }

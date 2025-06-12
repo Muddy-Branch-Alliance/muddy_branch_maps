@@ -4,7 +4,7 @@ module.exports.default = (context) => {
     "type": "symbol",
     "source": "protomaps",
     "source-layer": "roads",
-    "minzoom": 14,
+    "minzoom": 15,
     "filter": ["in", "kind", "other", "path"],
     "layout": {
       "symbol-sort-key": ["get", "min_zoom"],
@@ -15,13 +15,14 @@ module.exports.default = (context) => {
         ["get", "name:en"],
         ["get", "name"]
       ],
-      "text-size": ["interpolate", ["exponential",0.7], ["zoom"], 14, 12, 18, 14],
+      "text-size": ["interpolate", ["exponential",0.7], ["zoom"], 14, 11, 17, 14],
       "text-letter-spacing": ["interpolate", ["linear"], ["zoom"], 14, 0.1, 15, 0.05],
     },
     "paint": {
       "text-color": context.colors.trailLabel,
       "text-halo-color": context.colors.other_vegetation,
-      "text-halo-width": 1
+      "text-halo-width": context.settings.iconTextHaloWidth,
+      "text-halo-blur": context.settings.iconTextHaloBlur
     }
   };
   let overrides = {};

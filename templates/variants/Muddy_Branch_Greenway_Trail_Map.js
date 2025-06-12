@@ -4,8 +4,8 @@ module.exports.context = {
     chrome: 'rgb(218, 219, 223)',
     locality: 'rgb(92, 92, 92)',
     neighborhood: 'rgb(118, 118, 118)',
-    road_label: 'rgb(143, 143, 143)',
-    road_label_light: 'rgb(156, 156, 156)',
+    roadLabel: 'rgb(143, 143, 143)',
+    roadLabelLight: 'rgb(156, 156, 156)',
     halo: 'rgb(224, 224, 224)',
     halo_light: 'rgb(244, 244, 244)',
     ground_dark: 'rgb(226, 223, 218)',
@@ -19,14 +19,15 @@ module.exports.context = {
     water_light: 'rgb(148, 220, 251)',
     water_dark: 'rgb(89, 132, 151)',
     waterLabel: 'rgb(66, 99, 115)',
-    trailLabel: 'rgb(12, 40, 11)',
+    trailLabel: 'rgb(24, 80, 22)',
     greenspaceLabel: 'rgb(25, 80, 22)',
     otherLabel: 'rgb(106, 91, 143)'
   },
   settings: {
-    iconSizeMarkers: ["interpolate", ["linear"], ["zoom"], 11, 0.8, 16, 1], // outhouse, finish flag
+    iconSizeMarkers: ["interpolate", ["linear"], ["zoom"], 11, 0.8, 16, 1], // finish flag
     iconSizeAmenities: ["interpolate", ["linear"], ["zoom"], 11, 0.5, 16, 1], // parking
     iconSizeTrail: ["interpolate", ["linear"], ["zoom"], 13, 0.7, 16, 1], // trailhead, ford
+    iconSizeToilets: ["step",["zoom"], 1, 16, 1.2], // toilet
     iconLabelFont: ["Noto Sans Regular"],
     iconLabelFontSize: ["interpolate", ["exponential", 0.7], ["zoom"], 13, 11, 16, 12, 18, 14],
     iconLabelAnchors: ["left", "right", "bottom"],
@@ -34,7 +35,9 @@ module.exports.context = {
         11, ["literal",["left", [0.7, 0], "right", [-0.7, 0], "bottom", [0, 0.7]]],
         16, ["literal",["left", [1.2, 0], "right", [-1.2, 0], "bottom", [0, 1.2]]]
       ],
-    iconTextPadding: 2
+    iconTextPadding: 2,
+    iconTextHaloWidth: 1,
+    iconTextHaloBlur: 0.5
   }
 };
 

@@ -6,7 +6,7 @@ module.exports.default = (context) => {
     "filter": ["==",["get", "amenity"], "toilets"],
     "layout": {
       "icon-image": "outhouse",
-      "icon-size": context.settings.iconSizeMarkers,
+      "icon-size": context.settings.iconSizeToilets,
     }
   };
   let overrides = {};
