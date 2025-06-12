@@ -26,13 +26,13 @@ module.exports.context = {
   settings: {
     iconSizeMarkers: ["interpolate", ["linear"], ["zoom"], 11, 0.8, 16, 1], // outhouse, finish flag
     iconSizeAmenities: ["interpolate", ["linear"], ["zoom"], 11, 0.5, 16, 1], // parking
-    iconSizeTrail: ["interpolate", ["linear"], ["zoom"], 11, 0.5, 13, 0.8, 16, 1], // trailhead, ford
+    iconSizeTrail: ["interpolate", ["linear"], ["zoom"], 13, 0.7, 16, 1], // trailhead, ford
     iconLabelFont: ["Noto Sans Regular"],
-    iconLabelFontSize: ["interpolate", ["exponential", 0.7], ["zoom"], 13, 11, 18, 12],
+    iconLabelFontSize: ["interpolate", ["exponential", 0.7], ["zoom"], 13, 11, 16, 12, 18, 14],
     iconLabelAnchors: ["left", "right", "bottom"],
-    iconLabelAnchorOffsets: ["interpolate", ["exponential", 1.7], ["zoom"],
-        12, ["literal",["left", [0.7, 0], "right", [-0.7, 0], "bottom", [0, 0.7]]],
-        20, ["literal",["left", [1.2, 0], "right", [-1.2, 0], "bottom", [0, 1.2]]]
+    iconLabelAnchorOffsets: ["interpolate", ["linear"], ["zoom"],
+        11, ["literal",["left", [0.7, 0], "right", [-0.7, 0], "bottom", [0, 0.7]]],
+        16, ["literal",["left", [1.2, 0], "right", [-1.2, 0], "bottom", [0, 1.2]]]
       ],
     iconTextPadding: 2
   }
