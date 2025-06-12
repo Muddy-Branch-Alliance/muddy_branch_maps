@@ -25,7 +25,7 @@ module.exports.context = {
   },
   settings: {
     iconSizeMarkers: ["interpolate", ["exponential", 1], ["zoom"], 11, 0.8, 13, 1, 20, 1],
-    iconSizeAmenities: ["interpolate", ["exponential", 1], ["zoom"], 11, 0.8, 20, 1],
+    iconSizeAmenities: ["interpolate", ["exponential", 1], ["zoom"], 11, 0.5, 20, 1],
     iconSizeTrail: ["interpolate", ["exponential", 1], ["zoom"], 11, 0.8, 16, 1],
     iconLabelFont: ["Noto Sans Regular"],
     iconLabelFontSize: ["interpolate", ["exponential", 0.7], ["zoom"], 13, 11, 18, 12],

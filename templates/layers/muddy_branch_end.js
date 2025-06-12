@@ -6,7 +6,7 @@ module.exports.default = (context) => {
     "minzoom": 10,
     "filter": ["==",["get", "@id"], "way/411222691"],
     "layout": {
-      "icon-image": "finish_flag1",
+      "icon-image": "finish_flag",
       "icon-size": context.settings.iconSizeMarkers,
     }
   };

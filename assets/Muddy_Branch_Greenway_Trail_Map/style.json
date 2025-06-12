@@ -1752,7 +1752,7 @@
           ["exponential", 1],
           ["zoom"],
           11,
-          0.8,
+          0.5,
           20,
           1
         ]
@@ -1764,13 +1764,13 @@
       "source": "muddy_branch_relation",
       "filter": ["==", "amenity", "parking"],
       "layout": {
-        "icon-image": "p-circle",
+        "icon-image": "parking",
         "icon-size": [
           "interpolate",
           ["exponential", 1],
           ["zoom"],
           11,
-          0.8,
+          0.5,
           20,
           1
         ]
@@ -1783,7 +1783,7 @@
       "minzoom": 10,
       "filter": ["==", ["get", "@id"], "way/411222691"],
       "layout": {
-        "icon-image": "finish_flag1",
+        "icon-image": "finish_flag",
         "icon-size": [
           "interpolate",
           ["exponential", 1],
