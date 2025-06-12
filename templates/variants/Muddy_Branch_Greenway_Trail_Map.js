@@ -24,9 +24,9 @@ module.exports.context = {
     otherLabel: 'rgb(106, 91, 143)'
   },
   settings: {
-    iconSizeMarkers: ["interpolate", ["linear"], ["zoom"], 11, 0.8, 16, 1], // finish flag
-    iconSizeAmenities: ["interpolate", ["linear"], ["zoom"], 11, 0.5, 16, 1], // parking
-    iconSizeTrail: ["interpolate", ["linear"], ["zoom"], 13, 0.7, 16, 1], // trailhead, ford
+    iconSizeMarkers: ["interpolate", ["linear"], ["zoom"], 11, 0.7, 16, 1], // finish flag
+    iconSizeAmenities: ["interpolate", ["linear"], ["zoom"], 11, 0.4, 16, 1], // parking
+    iconSizeTrail: ["interpolate", ["linear"], ["zoom"], 13, 0.6, 16, 1], // trailhead, ford
     iconSizeToilets: ["step",["zoom"], 1, 16, 1.2], // toilet
     iconLabelFont: ["Noto Sans Regular"],
     iconLabelFontSize: ["interpolate", ["exponential", 0.7], ["zoom"], 13, 11, 16, 12, 18, 14],

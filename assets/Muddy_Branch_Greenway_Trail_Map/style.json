@@ -1648,7 +1648,7 @@
       "filter": ["==", ["get", "ford"], "yes"],
       "layout": {
         "icon-image": "ford",
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.7, 16, 1],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.6, 16, 1],
         "text-field": ["step", ["zoom"], "", 16, "Stream Crossing"],
         "text-font": ["Noto Sans Regular"],
         "text-justify": "auto",
@@ -1697,7 +1697,7 @@
       "filter": ["==", ["get", "highway"], "trailhead"],
       "layout": {
         "icon-image": "trailhead",
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.7, 16, 1],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 13, 0.6, 16, 1],
         "text-field": ["step", ["zoom"], "", 15, "Trailhead"],
         "text-font": ["Noto Sans Regular"],
         "text-justify": "auto",
@@ -1754,7 +1754,7 @@
       "filter": ["==", "amenity", "parking"],
       "layout": {
         "icon-image": "parking",
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 11, 0.5, 16, 1]
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 11, 0.4, 16, 1]
       }
     },
     {
@@ -1765,7 +1765,7 @@
       "filter": ["==", ["get", "@id"], "way/411222691"],
       "layout": {
         "icon-image": "finish_flag",
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 11, 0.8, 16, 1]
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 11, 0.7, 16, 1]
       }
     }
   ],
