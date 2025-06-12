@@ -999,27 +999,27 @@
       }
     },
     {
-      "id": "muddy-branch-trail",
+      "id": "muddy_branch_trail",
       "type": "line",
       "source": "muddy_branch_relation",
       "filter": ["all", ["==", "$type", "LineString"]],
       "paint": {
         "line-color": [
           "interpolate",
-          ["linear"],
+          ["exponential", 1.2],
           ["zoom"],
-          10,
-          "rgb(191, 56, 63)",
-          16,
-          "rgb(139, 69, 19)"
+          11,
+          "rgb(106, 90, 30)",
+          18,
+          "rgb(213, 180, 60)"
         ],
         "line-dasharray": [3, 1],
         "line-width": [
           "interpolate",
-          ["exponential", 1.6],
+          ["exponential", 1.2],
           ["zoom"],
-          10,
-          1.2,
+          11,
+          2,
           20,
           7
         ]
@@ -1645,11 +1645,9 @@
           "interpolate",
           ["exponential", 1],
           ["zoom"],
-          13,
-          0.5,
-          18,
+          11,
           0.8,
-          20,
+          16,
           1
         ],
         "text-field": ["step", ["zoom"], "", 16, "Stream Crossing"],
@@ -1701,11 +1699,9 @@
           "interpolate",
           ["exponential", 1],
           ["zoom"],
-          13,
-          0.5,
-          18,
+          11,
           0.8,
-          20,
+          16,
           1
         ],
         "text-field": ["step", ["zoom"], "", 15, "Trailhead"],
@@ -1755,11 +1751,9 @@
           "interpolate",
           ["exponential", 1],
           ["zoom"],
-          10,
-          0.5,
-          16,
-          0.7,
-          18,
+          11,
+          0.8,
+          20,
           1
         ]
       }
@@ -1775,11 +1769,9 @@
           "interpolate",
           ["exponential", 1],
           ["zoom"],
-          10,
-          0.5,
-          16,
-          0.7,
-          18,
+          11,
+          0.8,
+          20,
           1
         ]
       }
@@ -1796,12 +1788,12 @@
           "interpolate",
           ["exponential", 1],
           ["zoom"],
-          10,
-          0.7,
-          16,
+          11,
           0.8,
-          18,
-          1.2
+          13,
+          1,
+          20,
+          1
         ]
       }
     }

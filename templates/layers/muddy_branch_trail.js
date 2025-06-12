@@ -1,13 +1,13 @@
 module.exports.default = (context) => {
   const baseStyle = {
-    "id": "muddy-branch-trail",
+    "id": "muddy_branch_trail",
     "type": "line",
     "source": "muddy_branch_relation",
     "filter": ["all", ["==", "$type", "LineString"]],
     "paint": {
-      "line-color": ["interpolate", ["linear"], ["zoom"], 10, context.colors.trail, 16, context.colors.trail_highzoom],
+      "line-color": ["interpolate", ["exponential", 1.2], ["zoom"], 11, context.colors.trail_lowzoom, 18, context.colors.trail_highzoom],
       "line-dasharray": [3, 1],
-      "line-width": ["interpolate", ["exponential", 1.6], ["zoom"], 10, 1.2, 20, 7]
+      "line-width": ["interpolate", ["exponential", 1.2], ["zoom"], 11, 2, 20, 7]
     }
   };
   let overrides = {};
