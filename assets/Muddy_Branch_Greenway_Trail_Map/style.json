@@ -15,7 +15,7 @@
     "hillshade": {
       "type": "raster-dem",
       "encoding": "terrarium",
-      "url": "https://tiles.stadiamaps.com/data/terrarium.json",
+      "url": "pmtiles://assets/Muddy_Branch_Greenway_Trail_Map/terrarium-extract-z12.pmtiles",
       "tileSize": 256
     },
     "muddy_branch_watershed": {
@@ -37,8 +37,9 @@
           10,
           "rgb(226, 223, 218)",
           14,
-          "rgb(250, 252, 251)"
-        ]
+          "rgb(223, 279, 173)"
+        ],
+        "background-opacity": 0.25
       }
     },
     {

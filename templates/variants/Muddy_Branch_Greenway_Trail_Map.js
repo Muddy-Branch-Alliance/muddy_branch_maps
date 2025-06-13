@@ -9,7 +9,7 @@ module.exports.context = {
     halo: 'rgb(224, 224, 224)',
     halo_light: 'rgb(244, 244, 244)',
     ground_dark: 'rgb(226, 223, 218)',
-    ground_light: 'rgb(250, 252, 251)',
+    ground_light: 'rgb(223, 279, 173)',
     irrigated: 'rgb(178, 223, 138)',
     forest: 'rgb(51, 160, 44)',
     other_vegetation: 'rgb(178, 223, 138)',
@@ -58,8 +58,8 @@ module.exports.template = {
     "hillshade": {
       "type": "raster-dem",
       "encoding": "terrarium",
-      "url": "https://tiles.stadiamaps.com/data/terrarium.json",
-      "tileSize": 256
+      "url": "pmtiles://assets/Muddy_Branch_Greenway_Trail_Map/terrarium-extract-z12.pmtiles",
+      "tileSize": 256,
     },
     "muddy_branch_watershed": {
       "type": "geojson",
