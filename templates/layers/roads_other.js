@@ -14,7 +14,7 @@ module.exports.default = (context) => {
     "paint": {
       "line-color": "#ebebeb",
       "line-dasharray": [3, 1],
-      "line-width": ["interpolate", ["exponential", 1.6], ["zoom"], 14, 0, 20, 7]
+      "line-width": ["interpolate", ["exponential", 1.6], ["zoom"], 14, 0, 20, 8]
     }
   };
   let overrides = {};

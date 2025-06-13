@@ -765,7 +765,7 @@
           14,
           0,
           20,
-          7
+          8
         ]
       }
     },
@@ -1007,27 +1007,29 @@
       "paint": {
         "line-color": [
           "interpolate",
-          ["exponential", 1.2],
+          ["exponential", 2.5],
           ["zoom"],
           11,
-          "rgb(106, 90, 30)",
+          "rgb(191, 83, 56)",
           18,
-          "rgb(213, 180, 60)"
+          "rgb(213, 183, 111)"
         ],
         "line-dasharray": [
           "step",
           ["zoom"],
           ["literal", [3, 1]],
-          17,
-          ["literal", [3, 0]]
+          16,
+          ["literal", [2, 1]],
+          18,
+          ["literal", [2, 0]]
         ],
         "line-width": [
           "interpolate",
           ["exponential", 1.5],
           ["zoom"],
           11,
-          1,
-          18,
+          2,
+          20,
           12
         ]
       }
