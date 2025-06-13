@@ -3,14 +3,14 @@
   "name": "Muddy_Branch_Greenway_Trail_Map",
   "sources": {
     "protomaps": {
-      "attribution": "<a href=\"https://github.com/protomaps/basemaps\">Protomaps</a>",
+      "attribution": "<a href=\"https://github.com/protomaps/basemaps\" target=\"_blank\" rel=\"noopener noreferrer\">Protomaps</a>",
       "type": "vector",
       "url": "pmtiles://assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_area.pmtiles"
     },
     "muddy_branch_relation": {
       "type": "geojson",
       "data": "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_relation.geojson",
-      "attribution": "© <a href=\"https://openstreetmap.org\">OpenStreetMap</a>"
+      "attribution": "© <a href=\"https://openstreetmap.org\" target=\"_blank\" rel=\"noopener noreferrer\">OpenStreetMap</a>"
     },
     "hillshade": {
       "type": "raster-dem",
