@@ -48,11 +48,11 @@ module.exports.template = {
     "protomaps": {
       "attribution": "<a href=\"https://github.com/protomaps/basemaps\" target=\"_blank\" rel=\"noopener noreferrer\">Protomaps</a>",
       "type": "vector",
-      "url": "pmtiles://assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_area.pmtiles"
+      "url": "pmtiles://assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_reference_data.pmtiles"
     },
     "muddy_branch_relation": {
       "type": "geojson",
-      "data": "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_relation.geojson",
+      "data": "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_greenway_trail_relation.geojson",
       "attribution": "© <a href=\"https://openstreetmap.org\" target=\"_blank\" rel=\"noopener noreferrer\">OpenStreetMap</a>"
     },
     "hillshade": {
