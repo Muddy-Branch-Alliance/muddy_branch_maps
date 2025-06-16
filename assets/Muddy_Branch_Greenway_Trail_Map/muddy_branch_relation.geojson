@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-turbo",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2025-06-11T00:42:38Z",
+  "timestamp": "2025-06-16T20:17:44Z",
   "features": [
     {
       "type": "Feature",
@@ -58,7 +58,7 @@
         "operator": "Montgomery County Parks",
         "operator:type": "government",
         "parking": "surface",
-        "surface": "unpaved"
+        "surface": "paved"
       },
       "geometry": {
         "type": "Polygon",
@@ -950,6 +950,10 @@
             39.0832128
           ],
           [
+            -77.2767059,
+            39.0832083
+          ],
+          [
             -77.2767806,
             39.0832065
           ],
@@ -1012,6 +1016,10 @@
           [
             -77.2785549,
             39.0832503
+          ],
+          [
+            -77.2785647,
+            39.0832535
           ],
           [
             -77.2786085,
@@ -1486,12 +1494,12 @@
             39.0743666
           ],
           [
-            -77.2859739,
-            39.0742632
+            -77.2859081,
+            39.0742952
           ],
           [
-            -77.286084,
-            39.0742283
+            -77.2860007,
+            39.0742573
           ],
           [
             -77.2864279,
@@ -7265,6 +7273,10 @@
             39.0901586
           ],
           [
+            -77.2536341,
+            39.0901593
+          ],
+          [
             -77.2536559,
             39.0901601
           ],
@@ -7367,6 +7379,10 @@
           [
             -77.2571562,
             39.08919
+          ],
+          [
+            -77.2571684,
+            39.0891728
           ],
           [
             -77.2571857,
@@ -7519,6 +7535,10 @@
           [
             -77.2612761,
             39.0853635
+          ],
+          [
+            -77.2612722,
+            39.0849889
           ],
           [
             -77.2612706,
@@ -7978,8 +7998,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -77.286084,
-          39.0742283
+          -77.2860007,
+          39.0742573
         ]
       },
       "id": "node/5615008147"
@@ -8091,6 +8111,27 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/11674359412",
+        "bicycle": "yes",
+        "dog": "yes",
+        "foot": "yes",
+        "ford": "yes",
+        "horse": "yes",
+        "motor_vehicle": "no",
+        "operator": "Montgomery County Parks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.281107,
+          39.0822197
+        ]
+      },
+      "id": "node/11674359412"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/12388176108",
         "ford": "yes"
       },
@@ -8162,6 +8203,111 @@
         ]
       },
       "id": "node/12804701351"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12912999386",
+        "bicycle": "yes",
+        "dog": "yes",
+        "foot": "yes",
+        "ford": "yes",
+        "horse": "yes",
+        "motor_vehicle": "no",
+        "operator": "Montgomery County Parks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.2536341,
+          39.0901593
+        ]
+      },
+      "id": "node/12912999386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12912999387",
+        "bicycle": "yes",
+        "dog": "yes",
+        "foot": "yes",
+        "ford": "yes",
+        "horse": "yes",
+        "motor_vehicle": "no",
+        "operator": "Montgomery County Parks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.2571684,
+          39.0891728
+        ]
+      },
+      "id": "node/12912999387"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12912999388",
+        "bicycle": "yes",
+        "dog": "yes",
+        "foot": "yes",
+        "ford": "yes",
+        "horse": "yes",
+        "motor_vehicle": "no",
+        "operator": "Montgomery County Parks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.2612722,
+          39.0849889
+        ]
+      },
+      "id": "node/12912999388"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12912999389",
+        "bicycle": "yes",
+        "dog": "yes",
+        "foot": "yes",
+        "ford": "yes",
+        "horse": "yes",
+        "motor_vehicle": "no",
+        "operator": "Montgomery County Parks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.2767059,
+          39.0832083
+        ]
+      },
+      "id": "node/12912999389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12912999390",
+        "bicycle": "yes",
+        "dog": "yes",
+        "foot": "yes",
+        "ford": "yes",
+        "horse": "yes",
+        "motor_vehicle": "no",
+        "operator": "Montgomery County Parks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.2785647,
+          39.0832535
+        ]
+      },
+      "id": "node/12912999390"
     }
   ]
 }
