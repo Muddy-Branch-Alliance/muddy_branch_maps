@@ -16,13 +16,16 @@
             #map canvas {
                 cursor: grab;
             }
-            
-            .maplibregl-popup h3.custom-popup {
-                font-size: 16px;
+            .maplibregl-popup div.popup-title {
+                font-size: 14px;
                 color: green;
             }
-            .popup_table {
-                font-size: 14px;
+            .maplibregl-popup-content {
+                border-radius: 10px !important;
+                font-size: 12px;
+                padding: 8px;
+                width: 120px;
+                background: rgba(255, 255, 255, 0.8);
             }
         </style>
         <div id="map"></div>
@@ -64,27 +67,32 @@
                     const properties = e.features[0].properties;
 
                     let popup_info = properties.name;
-                    let table_content = properties;
-                    // select from this explicit list of properties:
+                    popup_info = popup_info ? popup_info : properties.operator;
+
+                    // Provide a link to get directions to the location:
+                    let directions_url = "https://www.google.com/maps/dir/?api=1&destination=" + coordinates.lat + "," + coordinates.lng;
+
+                    // tailor the popup info based on the amenity type:
                     if (properties.amenity === "parking") {
                         popup_info = popup_info ? popup_info : "Parking";
-                        popup_info = "<h3 class='custom-popup'>" + popup_info + "</h3>";
+                        popup_info = "<div class='popup-title'>" + popup_info + "</div>";
                         // Show these properties for parking lots:
                         popup_info += "<br><b>Surface</b>: " + properties.surface;
-                        popup_info += properties.fee == 'yes' ? "<p>Fee required</p>" : "<p>No fee required</p>";
+                        popup_info += properties.fee == 'yes' ? "<br><b>Fee:</b> Fee required</br>" : "<br><b>Fee:</b> No fee required</br>";
                     } else if (properties.amenity === "toilets") {
                         popup_info = popup_info ? popup_info : "Toilets";
-                        popup_info = "<h3 class='custom-popup'>" + popup_info + "</h3>";
+                        popup_info = "<div class='popup-title'>" + popup_info + "</div>";
                         // Show these properties for restrooms:
                         popup_info += "<br><b>Changing Table</b>: " + properties.changing_table;
                         popup_info += "<br><b>Portable</b>: " + properties.portable;
                         popup_info += "<br><b>Unisex</b>: " + properties.unisex;
                     } else {
                         popup_info = popup_info ? popup_info : "Landmark";
-                        popup_info = "<h3 class='custom-popup'>" + popup_info + "</h3>";
+                        popup_info = "<div class='popup-title'>" + popup_info + "</div>";
                         popup_info += properties.website ? "<a href='" + properties.website + "' target='_blank'><b>Website</b></a>" : "";
                     };
-                
+                    popup_info += "<br><a href='" + directions_url + "' target='_blank' rel='noopener noreferrer'>Get Directions</a>";
+
                     new maplibregl.Popup()
                         .setLngLat(coordinates)
                         .setHTML(popup_info)
