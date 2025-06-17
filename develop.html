@@ -34,7 +34,7 @@
             let pm = new pmtiles.Protocol();
             maplibregl.addProtocol("pmtiles",pm.tile);
 
-            let PMTILES_URL = "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_area.pmtiles";
+            let PMTILES_URL = "assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_reference_data.pmtiles";
             const p = new pmtiles.PMTiles(PMTILES_URL);
             pm.add(p);
 

@@ -37,7 +37,7 @@
           10,
           "rgb(226, 223, 218)",
           14,
-          "rgb(223, 279, 173)"
+          "rgb(218, 247, 166)"
         ],
         "background-opacity": 0.25
       }
@@ -61,7 +61,7 @@
       "type": "fill",
       "source": "muddy_branch_watershed",
       "paint": {
-        "fill-color": "rgb(255, 254, 253)",
+        "fill-color": "rgb(255, 255, 222)",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 0.2]
       }
     },
