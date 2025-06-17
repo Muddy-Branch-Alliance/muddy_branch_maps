@@ -17,7 +17,8 @@
                 cursor: grab;
             }
             .maplibregl-popup div.popup-title {
-                font-size: 14px;
+                font-size: 16px;
+                font-weight: bold;
                 color: green;
             }
             .maplibregl-popup-content {
@@ -83,15 +84,15 @@
                         popup_info = popup_info ? popup_info : "Toilets";
                         popup_info = "<div class='popup-title'>" + popup_info + "</div>";
                         // Show these properties for restrooms:
-                        popup_info += "<br><b>Changing Table</b>: " + properties.changing_table;
                         popup_info += "<br><b>Portable</b>: " + properties.portable;
                         popup_info += "<br><b>Unisex</b>: " + properties.unisex;
+                        popup_info += "<br><b>Changing Table</b>: " + properties.changing_table;
                     } else {
                         popup_info = popup_info ? popup_info : "Landmark";
                         popup_info = "<div class='popup-title'>" + popup_info + "</div>";
                         popup_info += properties.website ? "<a href='" + properties.website + "' target='_blank'><b>Website</b></a>" : "";
                     };
-                    popup_info += "<br><a href='" + directions_url + "' target='_blank' rel='noopener noreferrer'>Get Directions</a>";
+                    popup_info += "<p><a href='" + directions_url + "' target='_blank' rel='noopener noreferrer'>Get Directions</a></p>";
 
                     new maplibregl.Popup()
                         .setLngLat(coordinates)
