@@ -7,7 +7,7 @@ module.exports.default = (context) => {
     "filter": ["==",["get", "@id"], "way/411222691"],
     "layout": {
       "icon-image": "finish_flag",
-      "icon-size": context.settings.iconSizeMarkers,
+      "icon-size": context.settings.iconSize,
     }
   };
   let overrides = {};

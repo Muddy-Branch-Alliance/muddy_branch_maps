@@ -1747,7 +1747,7 @@
       "filter": ["==", ["get", "amenity"], "toilets"],
       "layout": {
         "icon-image": "outhouse",
-        "icon-size": ["step", ["zoom"], 1, 16, 1.2]
+        "icon-size": ["step", ["zoom"], 1, 16, 1.5]
       }
     },
     {
@@ -1757,7 +1757,17 @@
       "filter": ["==", "amenity", "parking"],
       "layout": {
         "icon-image": "parking",
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 11, 0.4, 16, 1]
+        "icon-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          11,
+          0.7,
+          16,
+          1,
+          18,
+          1.5
+        ]
       }
     },
     {
@@ -1768,7 +1778,17 @@
       "filter": ["==", ["get", "@id"], "way/411222691"],
       "layout": {
         "icon-image": "finish_flag",
-        "icon-size": ["interpolate", ["linear"], ["zoom"], 11, 0.7, 16, 1]
+        "icon-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          11,
+          0.7,
+          16,
+          1,
+          18,
+          1.5
+        ]
       }
     }
   ],
