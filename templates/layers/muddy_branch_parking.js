@@ -7,6 +7,7 @@ module.exports.default = (context) => {
     "layout": {
       "icon-image": "parking",
       "icon-size": context.settings.iconSize,
+      "icon-allow-overlap": true,
     },
   };
   let overrides = {};

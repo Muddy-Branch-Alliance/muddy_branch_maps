@@ -118,6 +118,7 @@ module.exports.template = {
     "roads_bridges_highway_casing",
     "roads_bridges_highway",
     "water_waterway_label",
+    "water_river_label",
     "roads_labels_minor",
     "water_label_lakes",
     "roads_labels_trail",
