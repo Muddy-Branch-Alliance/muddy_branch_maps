@@ -5,6 +5,14 @@ Welcome! This is a work-in-progress web map of the [Muddy Branch Greenway Trail]
 
 Here is a brief explanation of all of the underlying components this map relies on to render and display an intereactive map.
 
+## Deployment
+
+If you are interested in deploying (or modifying) this map from your own account:
+
+1. Clone this repo
+3. Enable Github Pages in the new location
+4. Search and replace any hard-coded references to the original Github Pages hosting site (e.g. https://mizmay.github.io/) with the new domain
+
 ## Data from OpenStreetMap
 
 The trail geometry, along with associated parking lots, trailheads, and other waypoints are all associated [with a single route relation in OpenStreetMap](https://www.openstreetmap.org/relation/18728360). To update any of those features on this map:
@@ -74,27 +82,4 @@ pmtiles extract https://build.protomaps.com/<LATEST_PLANET_FILE>.pmtiles muddy_b
 ```
 3. Replace the existing file in this repo with the updated file.
 
-## Deployment:
 
-1. Clone this repo
-3. Enable Github Pages in the new location
-4. Search and replace any hard-coded references to the original Github Pages hosting site (e.g. https://mizmay.github.io/) with the new domain
-
-
-## Success Criteria
-### Maps…
-- [ ] Show full extent of the Muddy Branch Greenway Trail within the context of Muddy Branch Watershed
-- [ ] Help people plan trips to hike the trail
-- [ ] Can be incorporated into the existing website
-### Muddy Branch Greenway Trail data…
-- [ ] Is up to date and accurate
-- [ ] Is findable and accurate on common platforms (AllTrails, Apple Maps, etc.)
-- [ ] Is shown on Google Maps
-- [ ] Can be maintained by Muddy Branch Alliance going forward (e.g. Volunteer recruited to take over maintaining in OSM)
-- [ ] Sufficiently well-documented
-### Internet search for Muddy Branch Greenway Trail…
-- [ ] Yields up to date and accurate information about the extent of the trail and it’s purpose
-- [ ] Entices locals to use it
-- [ ] Usefulness to OpenStreetMap community…
-- [ ] Becomes a reproducible example of how others can do a project like this
-- [ ] Provides meaningful insights to broader initiatives like OpenTrailMap
