@@ -66,8 +66,8 @@ The _reference layers_ are everything on the map _not_ coming directly from the 
 
 ### Landcover, Roads, Labels, etc.
 
-Everything else was downloaded from (Protomaps)[https://docs.protomaps.com] and saved as `muddy_branch_area.pmtiles`. Should these layers ever become out-of-date and you need a more recent version, here's how to download and replace these layers:
-1. Follow the (Getting Started)[https://docs.protomaps.com/guide/getting-started] guide to install the CLI and find the latest daily planet file
+Everything else was downloaded from [Protomaps](https://docs.protomaps.com) and saved as `muddy_branch_area.pmtiles`. Should these layers ever become out-of-date and you need a more recent version, here's how to download and replace these layers:
+1. Follow the [Getting Started](https://docs.protomaps.com/guide/getting-started) guide to install the CLI and find the latest daily planet file
 2. Paste this at the command line, replacing <LATEST_PLANET_FILE> with the name of the latest daily planet file:
 ```
 pmtiles extract https://build.protomaps.com/<LATEST_PLANET_FILE>.pmtiles muddy_branch_area.pmtiles --minzoom=10 --maxzoom=16 --bbox=-77.574463,38.934310,-76.956482,39.254056
