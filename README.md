@@ -83,10 +83,7 @@ Note this terrain data is likely from 2008 or before, and at current writing the
 
 ### Landcover, Roads, Labels, etc.
 
-Everything else came from [Protomaps](https://docs.protomaps.com). The Protomaps tile data extract is saved as `muddy_branch_reference_data.pmtiles` [here](assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_reference_data.pmtiles). It is comprised primarily of OpenStreetMap data but optimized to be performant for web maps. The [original Protomaps stylesheet](https://github.com/protomaps/basemaps/tree/main/styles) has been replaced with a custom one designed for this project. To make changes:
-1. Install [Map GL Style Build](https://github.com/stamen/map-gl-style-build) in a local clone of this repo
-2. Modify the [layer](templates/layers) you want to change according to the [Maplibre Style Specification](https://maplibre.org/maplibre-gl-js/docs/style-spec/)
-3. Build the `style.json` file [here](assets/Muddy_Branch_Greenway_Trail_Map/style.json) by running the Map GL Style Build `build` command.
+Everything else came from [Protomaps](https://docs.protomaps.com). The Protomaps tile data extract is saved as `muddy_branch_reference_data.pmtiles` [here](assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_reference_data.pmtiles). It is comprised primarily of OpenStreetMap data but optimized to be performant for web maps.
 
 The global Protomaps tiles are updated nightly. Should the data in these layers ever become out-of-date and you need a more recent version, here's how to download and replace these layers:
 1. Follow the [Getting Started](https://docs.protomaps.com/guide/getting-started) guide to install the CLI (if you haven't already) and find the latest daily planet file
@@ -96,11 +93,19 @@ pmtiles extract https://build.protomaps.com/<LATEST_PLANET_FILE>.pmtiles muddy_b
 ```
 3. Replace the existing file in this repo with the updated file.
 
-## Icons and Fonts
+## Other Assets
 
-All the map icons and text labels are rendered from assets in this repo. Instructions for how to access or modify these below.
+Map controls and interactivity elements such as pop-ups are [defined here](index.html) and controlled by [Maplibre GL GS](https://maplibre.org/maplibre-gl-js/docs/). All the layers, map icons and text labels are rendered from assets in this repo based on instructions in the stylesheet. Instructions for how to access or modify these below.
 
 THe [original Protomaps assets](https://github.com/protomaps/basemaps-assets?tab=readme-ov-file] were used as a guide for what to implement and how.
+
+### Styles
+
+The [original Protomaps stylesheet](https://github.com/protomaps/basemaps/tree/main/styles) has been replaced with a custom one designed for this project. To make changes:
+1. Install [Map GL Style Build](https://github.com/stamen/map-gl-style-build) in a local clone of this repo
+2. Modify the [layer](templates/layers) you want to change according to the [Maplibre Style Specification](https://maplibre.org/maplibre-gl-js/docs/style-spec/)
+3. Build the `style.json` file [here](assets/Muddy_Branch_Greenway_Trail_Map/style.json) by running the Map GL Style Build `build` command.
+
 
 ### Icons
 
