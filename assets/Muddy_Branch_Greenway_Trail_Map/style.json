@@ -47,13 +47,13 @@
       "type": "hillshade",
       "source": "hillshade",
       "paint": {
-        "hillshade-accent-color": "#000000",
+        "hillshade-accent-color": "rgb(0, 0, 0)",
         "hillshade-exaggeration": 0.5,
-        "hillshade-highlight-color": "#FFFFFF",
+        "hillshade-highlight-color": "rgb(255, 255, 255)",
         "hillshade-illumination-altitude": 45,
         "hillshade-illumination-direction": 315,
         "hillshade-method": "igor",
-        "hillshade-shadow-color": "#808080"
+        "hillshade-shadow-color": "rgb(128, 128, 128)"
       }
     },
     {

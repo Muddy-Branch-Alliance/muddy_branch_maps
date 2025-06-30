@@ -1,6 +1,11 @@
 module.exports.context = {
   colors: {
+    backgroundDark: 'rgb(226, 223, 218)',
+    backgroundLight: 'rgb(218, 247, 166)',
     building: 'rgb(234, 234, 234)',
+    hillshadeShadow: 'rgb(128, 128, 128)',
+    hillshadeAccent: 'rgb(0, 0, 0)',
+    hillshadeHighlight: 'rgb(255, 255, 255)',
     chrome: 'rgb(218, 219, 223)',
     locality: 'rgb(92, 92, 92)',
     neighborhood: 'rgb(118, 118, 118)',
@@ -8,8 +13,6 @@ module.exports.context = {
     roadLabelLight: 'rgb(156, 156, 156)',
     halo: 'rgb(224, 224, 224)',
     halo_light: 'rgb(244, 244, 244)',
-    ground_dark: 'rgb(226, 223, 218)',
-    ground_light: 'rgb(218, 247, 166)',
     irrigated: 'rgb(178, 223, 138)',
     forest: 'rgb(51, 160, 44)',
     other_vegetation: 'rgb(178, 223, 138)',

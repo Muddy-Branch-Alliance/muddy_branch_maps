@@ -3,7 +3,7 @@ module.exports.default = (context) => {
       "id": "background",
       "type": "background",
       "paint": {
-        "background-color": [ "interpolate", ["exponential", 0.5], ["zoom"], 10, context.colors.ground_dark, 14, context.colors.ground_light ],
+        "background-color": [ "interpolate", ["exponential", 0.5], ["zoom"], 10, context.colors.backgroundDark, 14, context.colors.backgroundLight ],
         "background-opacity": 0.25,
       }
     };
