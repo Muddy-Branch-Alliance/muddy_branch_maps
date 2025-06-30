@@ -6,7 +6,7 @@ module.exports.default = (context) => {
     "source-layer": "roads",
     "filter": ["all", ["has", "is_tunnel"], ["in", "kind", "other", "path"]],
     "paint": {
-      "line-color": "#e0e0e0",
+      "line-color": context.colors.pavementMedium,
       "line-gap-width": [
         "interpolate",
         ["exponential", 1.6],

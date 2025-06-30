@@ -24,7 +24,7 @@ module.exports.default = (context) => {
         18,
         13
       ],
-      "line-color": "#ebebeb"
+      "line-color": context.colors.pavementLight
     }
   };
   let overrides = {};

@@ -12,7 +12,7 @@ module.exports.default = (context) => {
       ["!=", "kind_detail", "pier"]
     ],
     "paint": {
-      "line-color": "#ebebeb",
+      "line-color": context.colors.pavementLight,
       "line-dasharray": [3, 1],
       "line-width": ["interpolate", ["exponential", 1.6], ["zoom"], 14, 0, 20, 8]
     }

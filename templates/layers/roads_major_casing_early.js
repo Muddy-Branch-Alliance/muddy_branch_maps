@@ -12,7 +12,7 @@ module.exports.default = (context) => {
       ["==", "kind", "major_road"]
     ],
     "paint": {
-      "line-color": "#e0e0e0",
+      "line-color": context.colors.pavementMedium,
       "line-gap-width": [
         "interpolate",
         ["exponential", 1.6],

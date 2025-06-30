@@ -12,7 +12,7 @@ module.exports.default = (context) => {
       ["==", "kind_detail", "service"]
     ],
     "paint": {
-      "line-color": "#ebebeb",
+      "line-color": context.colors.pavementLight,
       "line-width": ["interpolate", ["exponential", 1.6], ["zoom"], 13, 0, 18, 8]
     }
   };

@@ -2,6 +2,7 @@ module.exports.context = {
   colors: {
     backgroundDark: 'rgb(226, 223, 218)',
     backgroundLight: 'rgb(218, 247, 166)',
+    pavementLightest: 'rgb(244, 244, 244)',
     pavementLight: 'rgb(234, 234, 234)',
     pavementMedium: 'rgb(224, 224, 224)',
     hillshadeShadow: 'rgb(128, 128, 128)',

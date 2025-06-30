@@ -7,7 +7,7 @@ module.exports.default = (context) => {
     "minzoom": 12,
     "filter": ["all", ["has", "is_bridge"], ["==", "kind", "major_road"]],
     "paint": {
-      "line-color": "#f5f5f5",
+      "line-color": context.colors.pavementLightest,
       "line-width": [
         "interpolate",
         ["exponential", 1.6],
