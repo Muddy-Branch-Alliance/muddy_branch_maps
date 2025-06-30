@@ -11,7 +11,7 @@ module.exports.default = (context) => {
       ["!", ["has", "is_link"]]
     ],
     "paint": {
-      "line-color": "#d5d5d5",
+      "line-color": context.colors.pavementMedium,
       "line-width": [
         "interpolate",
         ["exponential", 1.6],

@@ -140,7 +140,7 @@
       "source-layer": "roads",
       "filter": ["==", "kind_detail", "runway"],
       "paint": {
-        "line-color": "#e9e9ed",
+        "line-color": "rgb(234, 234, 234)",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -162,7 +162,7 @@
       "minzoom": 13,
       "filter": ["==", "kind_detail", "taxiway"],
       "paint": {
-        "line-color": "#e9e9ed",
+        "line-color": "rgb(234, 234, 234)",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -413,7 +413,7 @@
       "source-layer": "roads",
       "filter": ["all", ["has", "is_tunnel"], ["in", "kind", "other", "path"]],
       "paint": {
-        "line-color": "#d5d5d5",
+        "line-color": "rgb(224, 224, 224)",
         "line-dasharray": [4.5, 0.5],
         "line-width": [
           "interpolate",
@@ -433,7 +433,7 @@
       "source-layer": "roads",
       "filter": ["all", ["has", "is_tunnel"], ["==", "kind", "minor_road"]],
       "paint": {
-        "line-color": "#d5d5d5",
+        "line-color": "rgb(224, 224, 224)",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -456,7 +456,7 @@
       "source-layer": "roads",
       "filter": ["all", ["has", "is_tunnel"], ["has", "is_link"]],
       "paint": {
-        "line-color": "#d5d5d5",
+        "line-color": "rgb(224, 224, 224)",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -477,7 +477,7 @@
       "source-layer": "roads",
       "filter": ["all", ["has", "is_tunnel"], ["==", "kind", "major_road"]],
       "paint": {
-        "line-color": "#d5d5d5",
+        "line-color": "rgb(224, 224, 224)",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -505,7 +505,7 @@
         ["!", ["has", "is_link"]]
       ],
       "paint": {
-        "line-color": "#d5d5d5",
+        "line-color": "rgb(224, 224, 224)",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -984,7 +984,7 @@
       "source-layer": "roads",
       "filter": ["==", "kind", "rail"],
       "paint": {
-        "line-color": "#a7b1b3",
+        "line-color": "rgb(167,167,167)",
         "line-dasharray": [0.3, 0.75],
         "line-opacity": 0.5,
         "line-width": [

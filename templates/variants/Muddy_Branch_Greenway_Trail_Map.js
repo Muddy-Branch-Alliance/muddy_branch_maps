@@ -5,6 +5,7 @@ module.exports.context = {
     pavementLightest: 'rgb(244, 244, 244)',
     pavementLight: 'rgb(234, 234, 234)',
     pavementMedium: 'rgb(224, 224, 224)',
+    pavementDark: 'rgb(167,167,167)',
     hillshadeShadow: 'rgb(128, 128, 128)',
     black: 'rgb(0, 0, 0)',
     white: 'rgb(255, 255, 255)',

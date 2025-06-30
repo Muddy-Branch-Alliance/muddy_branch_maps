@@ -8,7 +8,7 @@ module.exports.default = (context) => {
     "paint": {
       "line-dasharray": [0.3, 0.75],
       "line-opacity": 0.5,
-      "line-color": "#a7b1b3",
+      "line-color": context.colors.pavementDark,
       "line-width": [
         "interpolate",
         ["exponential", 1.6],

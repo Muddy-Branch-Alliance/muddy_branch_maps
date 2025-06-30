@@ -7,7 +7,7 @@ module.exports.default = (context) => {
     "minzoom": 13,
     "filter": ["==", "kind_detail", "taxiway"],
     "paint": {
-      "line-color": "#e9e9ed",
+      "line-color": context.colors.pavementLight,
       "line-width": [
         "interpolate",
         ["exponential", 1.6],
