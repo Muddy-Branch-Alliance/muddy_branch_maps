@@ -131,7 +131,7 @@
       "source": "protomaps",
       "source-layer": "landuse",
       "filter": ["in", "kind", "aerodrome"],
-      "paint": {"fill-color": "rgb(224, 224, 224)"}
+      "paint": {"fill-color": "rgb(226, 223, 218)"}
     },
     {
       "id": "roads_runway",
@@ -529,7 +529,7 @@
       "source": "protomaps",
       "source-layer": "buildings",
       "paint": {
-        "fill-color": "rgb(234, 234, 234)",
+        "fill-color": "rgb(226, 223, 218)",
         "fill-opacity": [
           "interpolate",
           ["exponential", 1.5],
