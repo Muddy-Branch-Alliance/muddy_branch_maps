@@ -58,20 +58,6 @@ out body;
 1. ( Optional / Recommended ) Verify the updates in the GeoJSON make sense compared with [`muddy_branch_greenway_trail_relation.geojson`](assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_greenway_trail_relation.geojson).
 2. Replace `muddy_branch_greenway_trail_relation.geojson` with the file you just downloaded.
 
-## Icons and Fonts
-
-All the map icons and text labels are rendered from assets in this repo. Instructions for how to access or modify these below.
-
-The original Protomaps assets were helpful in defining what to implement and how, documented [here](https://github.com/protomaps/basemaps-assets?tab=readme-ov-file).
-
-### Icons
-
-Icons are [custom SVGs](./assets/icons) created for this project and transformed to [sprites](https://github.com/mizmay/muddy_branch_maps/tree/main/assets/sprites) that match the Maplibre GL spec using a command-line tool called [Spreet](https://github.com/flother/spreet). Note, both the JSON and PNG are required by the renderer.
-
-### Fonts
-
-The map currently uses [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) for all text labels, accessed from [here](./assets/fonts). You can switch to any [Maplibre GL compatible font](https://github.com/maplibre/font-maker) by updating the `text-font` declarations [throughout the stylesheet](./assets/Muddy_Branch_Greenway_Trail_Map/style.json) and the stylesheet `glyph` [location](./assets/Muddy_Branch_Greenway_Trail_Map/style.json#L27) (if stored somewhere else). 
-
 ## Reference Layers
 
 The _reference layers_ are everything on the map _not_ coming directly from the OpenStreetMap query above.
@@ -109,5 +95,20 @@ Should the data in these layers ever become out-of-date and you need a more rece
 pmtiles extract https://build.protomaps.com/<LATEST_PLANET_FILE>.pmtiles muddy_branch_area.pmtiles --minzoom=10 --maxzoom=16 --bbox=-77.574463,38.934310,-76.956482,39.254056
 ```
 3. Replace the existing file in this repo with the updated file.
+
+## Icons and Fonts
+
+All the map icons and text labels are rendered from assets in this repo. Instructions for how to access or modify these below.
+
+THe [original Protomaps assets](https://github.com/protomaps/basemaps-assets?tab=readme-ov-file] were used as a guide for what to implement and how.
+
+### Icons
+
+Icons are [custom SVGs](./assets/icons) created for this project and transformed to [sprites](https://github.com/mizmay/muddy_branch_maps/tree/main/assets/sprites) that match the Maplibre GL spec using a command-line tool called [Spreet](https://github.com/flother/spreet). Note, both the JSON and PNG are required by the renderer.
+
+### Fonts
+
+The map currently uses [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) for all text labels, accessed from [here](./assets/fonts). You can switch to any [Maplibre GL compatible font](https://github.com/maplibre/font-maker) by updating the `text-font` declarations [throughout the stylesheet](./assets/Muddy_Branch_Greenway_Trail_Map/style.json) and the stylesheet `glyph` [location](./assets/Muddy_Branch_Greenway_Trail_Map/style.json#L27) (if stored somewhere else). 
+
 
 
