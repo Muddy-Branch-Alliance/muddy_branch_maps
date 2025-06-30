@@ -8,8 +8,8 @@ module.exports.default = (context) => {
       "hillshade-illumination-altitude": 45,
       "hillshade-illumination-direction": 315,
       "hillshade-shadow-color": context.colors.hillshadeShadow,
-      "hillshade-highlight-color": context.colors.hillshadeHighlight,
-      "hillshade-accent-color": context.colors.hillshadeAccent,
+      "hillshade-highlight-color": context.colors.white,
+      "hillshade-accent-color": context.colors.black,
       "hillshade-exaggeration": 0.5
     }
   };

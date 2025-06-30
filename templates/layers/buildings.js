@@ -5,7 +5,7 @@ module.exports.default = (context) => {
     "source": "protomaps",
     "source-layer": "buildings",
     "paint": {
-      "fill-color": context.colors.building,
+      "fill-color": context.colors.pavementLight,
       "fill-opacity": [ "interpolate", ["exponential",1.5], ["zoom"], 13, 0.5, 16, 1 ],
     }
   };

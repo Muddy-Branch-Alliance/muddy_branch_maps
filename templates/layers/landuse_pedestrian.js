@@ -5,7 +5,7 @@ module.exports.default = (context) => {
     "source": "protomaps",
     "source-layer": "landuse",
     "filter": ["==", "kind", "pedestrian"],
-    "paint": {"fill-color": "#e3e0d4"}
+    "paint": {"fill-color": context.colors.pavementLight}
   };
   let overrides = {};
   

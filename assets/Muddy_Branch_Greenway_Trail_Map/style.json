@@ -119,7 +119,7 @@
             ["get", "kind"],
             ["literal", ["military", "naval_base", "airfield"]]
           ],
-          "rgb(218, 219, 223)",
+          "rgb(224, 224, 224)",
           "rgb(226, 223, 218)"
         ],
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.1, 16, 0.5]
@@ -131,7 +131,7 @@
       "source": "protomaps",
       "source-layer": "landuse",
       "filter": ["in", "kind", "aerodrome"],
-      "paint": {"fill-color": "rgb(218, 219, 223)"}
+      "paint": {"fill-color": "rgb(224, 224, 224)"}
     },
     {
       "id": "roads_runway",
@@ -182,7 +182,7 @@
       "source": "protomaps",
       "source-layer": "landuse",
       "filter": ["any", ["in", "kind", "runway", "taxiway"]],
-      "paint": {"fill-color": "#e9e9ed"}
+      "paint": {"fill-color": "rgb(234, 234, 234)"}
     },
     {
       "id": "water",
@@ -238,7 +238,7 @@
       "source": "protomaps",
       "source-layer": "landuse",
       "filter": ["==", "kind", "pedestrian"],
-      "paint": {"fill-color": "#e3e0d4"}
+      "paint": {"fill-color": "rgb(234, 234, 234)"}
     },
     {
       "id": "landuse_pier",
@@ -246,7 +246,7 @@
       "source": "protomaps",
       "source-layer": "landuse",
       "filter": ["==", "kind", "pier"],
-      "paint": {"fill-color": "#e0e0e0"}
+      "paint": {"fill-color": "rgb(234, 234, 234)"}
     },
     {
       "id": "roads_tunnels_other_casing",
@@ -1254,7 +1254,7 @@
         ["!has", "is_link"]
       ],
       "paint": {
-        "line-color": "#e0e0e0",
+        "line-color": "rgb(224, 224, 224)",
         "line-gap-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -1291,7 +1291,7 @@
         ["!has", "is_link"]
       ],
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "rgb(255, 255, 255)",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
