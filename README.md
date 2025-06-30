@@ -74,8 +74,13 @@ The map currently uses [Noto Sans](https://fonts.google.com/noto/specimen/Noto+S
 
 ## Reference Layers
 
-
 The _reference layers_ are everything on the map _not_ coming directly from the OpenStreetMap query above.
+
+### Watershed Boundary
+
+The boundary for the Muddy Branch Watershed came from the previous version of this map on the Muddy Branch website. The KML was converted to a GeoJSON, which can be previewed [here](assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_watershed.geojson).
+
+It's likely the original data came from the [USGS National Map](https://apps.nationalmap.gov/downloader/), Hydrography dataset.
 
 ### Hillshade
 
