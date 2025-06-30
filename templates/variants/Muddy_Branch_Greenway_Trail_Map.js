@@ -6,7 +6,7 @@ module.exports.context = {
     hillshadeShadow: 'rgb(128, 128, 128)',
     hillshadeAccent: 'rgb(0, 0, 0)',
     hillshadeHighlight: 'rgb(255, 255, 255)',
-    chrome: 'rgb(218, 219, 223)',
+    airfield: 'rgb(218, 219, 223)',
     locality: 'rgb(92, 92, 92)',
     neighborhood: 'rgb(118, 118, 118)',
     roadLabel: 'rgb(143, 143, 143)',

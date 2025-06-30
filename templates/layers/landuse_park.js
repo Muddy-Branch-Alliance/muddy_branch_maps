@@ -47,7 +47,7 @@ module.exports.default = (context) => {
           ["get", "kind"],
           ["literal", ["military", "naval_base", "airfield"]]
         ],
-        context.colors.chrome,
+        context.colors.airfield,
         context.colors.backgroundDark
       ]
     }
