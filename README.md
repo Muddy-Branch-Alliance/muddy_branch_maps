@@ -1,5 +1,5 @@
 
-Welcome! This repo contains a redesigned web map of the [Muddy Branch Greenway Trail](https://muddybranch.org/maps/), suitable for embedding in an iFrame or wherever you might need a digital map. The map is rendered by [Maplibre GL JS](https://maplibre.org/maplibre-gl-js/docs/). There are no additional external requirements or dependencies.
+Welcome! This repo contains a redesigned web map of the [Muddy Branch Greenway Trail](https://muddybranch.org/maps/), suitable for embedding in an iFrame or wherever you might need a digital map. The map is rendered by [Maplibre GL JS](https://maplibre.org/maplibre-gl-js/docs/). All components needed to display it are contained within this repo. There are no additional external requirements or dependencies.
 
 ![Map Preview](Muddy_Branch_Greenway_Trail_Map.png)
 
