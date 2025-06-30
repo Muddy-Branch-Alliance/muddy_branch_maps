@@ -55,8 +55,8 @@ out body;
 
 ### Replacing the data in this Repo
 
-1. ( Optional / Recommended ) Verify the updates in the GeoJSON make sense compared with `muddy_branch_relation.geojson`.
-2. Replace `muddy_branch_relation.geojson` with the file you just downloaded.
+1. ( Optional / Recommended ) Verify the updates in the GeoJSON make sense compared with [`muddy_branch_greenway_trail_relation.geojson`](assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_greenway_trail_relation.geojson).
+2. Replace `muddy_branch_greenway_trail_relation.geojson` with the file you just downloaded.
 
 ## Icons and Fonts
 
