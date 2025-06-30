@@ -86,8 +86,9 @@ pmtiles extract terrarium-z12.pmtiles muddy_branch_area.pmtiles --bbox=-77.57446
 The original source for this archive is [here](https://registry.opendata.aws/terrain-tiles/). There is a lot more information about the Terrarium tiles, created by Tilezen [here](https://github.com/tilezen/joerd).
 
 Note this terrain data is likely from 2008 or before, and at current writing there is nothing newer available from the [USGS National Map](https://apps.nationalmap.gov/downloader/). However there is a more recent digital elevation model (DEM) available from the Montgomery County GIS website [here](https://data.imap.maryland.gov/datasets/474bb0b3df484e979a390f39ba4cc47d/explore). If you choose to update to this data source, download this DEM, warp it to the correct map projection (Web Mercator, EPSG:3857), and then are two options for replacing current hillshade layer with this one:
-1. Convert it to [RGB-encoded](https://github.com/mapbox/rio-rgbify) PMtiles, replace the existing file, and update the `hillshade` layer of the stylesheet as needed, OR
-2. Use [QGIS](https://docs.qgis.org/3.40/en/docs/training_manual/rasters/terrain_analysis.html) or [GDAL](https://gdal.org/en/stable/programs/gdaldem.html) to generate a pre-styled hillshade, convert it to PMtiles, replace the existing file, and change the stylesheet to reflect that the new data source is type `raster-dem`, rendered as-is.
+1. Follow the [Getting Started](https://docs.protomaps.com/guide/getting-started) guide to install the pmtiles CLI
+2. Convert it to [RGB-encoded](https://github.com/mapbox/rio-rgbify) PMtiles, replace the existing file, and update the `hillshade` layer of the stylesheet as needed, OR
+3. Use [QGIS](https://docs.qgis.org/3.40/en/docs/training_manual/rasters/terrain_analysis.html) or [GDAL](https://gdal.org/en/stable/programs/gdaldem.html) to generate a pre-styled hillshade, convert it to PMtiles, replace the existing file, and change the stylesheet to reflect that the new data source is type `raster-dem`, rendered as-is.
 
 ### Landcover, Roads, Labels, etc.
 
@@ -97,7 +98,7 @@ Everything else originally came from [Protomaps](https://docs.protomaps.com). Th
 3. Build the `style.json` file [here](assets/Muddy_Branch_Greenway_Trail_Map/style.json) by running the Map GL Style Build `build` command.
 
 Should the data in these layers ever become out-of-date and you need a more recent version, here's how to download and replace these layers:
-1. Follow the [Getting Started](https://docs.protomaps.com/guide/getting-started) guide to install the CLI and find the latest daily planet file
+1. Follow the [Getting Started](https://docs.protomaps.com/guide/getting-started) guide to install the CLI (if you haven't already) and find the latest daily planet file
 2. Paste this at the command line, replacing <LATEST_PLANET_FILE> with the name of the latest daily planet file:
 ```
 pmtiles extract https://build.protomaps.com/<LATEST_PLANET_FILE>.pmtiles muddy_branch_area.pmtiles --minzoom=10 --maxzoom=16 --bbox=-77.574463,38.934310,-76.956482,39.254056
