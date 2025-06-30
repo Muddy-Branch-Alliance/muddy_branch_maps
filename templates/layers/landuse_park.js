@@ -33,15 +33,15 @@ module.exports.default = (context) => {
           ["get", "kind"],
           ["literal", ["park", "cemetery", "golf_course"]]
         ],
-        context.colors.irrigated,
+        context.colors.greenIrrigated,
         [
           "in",
           ["get", "kind"],
           ["literal", ["wood", "forest","nature_reserve","protected_area","scrub"]]
         ],
-        context.colors.forest,
+        context.colors.greenForest,
         ["in", ["get", "kind"], ["literal", ["grass","national_park","grassland"]]],
-        context.colors.other_vegetation,
+        context.colors.greenOther,
         [
           "in",
           ["get", "kind"],

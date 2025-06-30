@@ -43,8 +43,8 @@ module.exports.default = (context) => {
       ]
     },
     "paint": {
-      "text-color": context.colors.locality,
-      "text-halo-color": context.colors.halo,
+      "text-color": context.colors.placeLabel,
+      "text-halo-color": context.colors.pavementMedium,
       "text-halo-width": 1
     }
   };

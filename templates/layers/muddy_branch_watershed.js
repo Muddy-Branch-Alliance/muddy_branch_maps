@@ -4,7 +4,7 @@ module.exports.default = (context) => {
       "type": "fill",
       "source": "muddy_branch_watershed",
       "paint": {
-        "fill-color": context.colors.watershed_highlight,
+        "fill-color": context.colors.highlightWatershed,
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 0.2],
       }
     };

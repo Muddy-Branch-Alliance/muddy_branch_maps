@@ -17,8 +17,8 @@ module.exports.default = (context) => {
       "text-max-width": 9
     },
     "paint": {
-      "text-color": context.colors.water_dark,
-      "text-halo-color": context.colors.water_light,
+      "text-color": context.colors.waterZoomedOut,
+      "text-halo-color": context.colors.waterZoomedIn,
       "text-halo-width": 1
     }
   };

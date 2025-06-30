@@ -20,7 +20,7 @@ module.exports.default = (context) => {
     },
     "paint": {
       "text-color": context.colors.trailLabel,
-      "text-halo-color": context.colors.other_vegetation,
+      "text-halo-color": context.colors.greenOther,
       "text-halo-width": context.settings.iconTextHaloWidth,
       "text-halo-blur": context.settings.iconTextHaloBlur
     }

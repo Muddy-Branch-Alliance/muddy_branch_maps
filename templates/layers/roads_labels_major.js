@@ -19,7 +19,7 @@ module.exports.default = (context) => {
     },
     "paint": {
       "text-color": context.colors.roadLabel,
-      "text-halo-color": context.colors.halo_light,
+      "text-halo-color": context.colors.pavementLightest,
       "text-halo-width": 1
     }
   };

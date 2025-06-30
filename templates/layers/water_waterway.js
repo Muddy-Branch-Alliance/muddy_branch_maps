@@ -6,7 +6,7 @@ module.exports.default = (context) => {
     "source-layer": "water",
     "filter": ["in", "kind", "stream","river"],
     "paint": {
-      "line-color": [ "interpolate", ["exponential", 0.5], ["zoom"], 10, context.colors.water_dark, 14, context.colors.water_light ],
+      "line-color": [ "interpolate", ["exponential", 0.5], ["zoom"], 10, context.colors.waterZoomedOut, 14, context.colors.waterZoomedIn ],
       "line-blur": 1,
       "line-width": [
         "interpolate",

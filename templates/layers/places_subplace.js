@@ -39,8 +39,8 @@ module.exports.default = (context) => {
       "text-transform": "uppercase"
     },
     "paint": {
-      "text-color": context.colors.neighborhood,
-      "text-halo-color": context.colors.halo,
+      "text-color": context.colors.neighborhoodLabel,
+      "text-halo-color": context.colors.pavementMedium,
       "text-halo-width": 1
     }
   };

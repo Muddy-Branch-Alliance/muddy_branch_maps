@@ -93,7 +93,7 @@ module.exports.default = (context) => {
         context.colors.otherLabel,
         context.colors.otherLabel
       ],
-      "text-halo-color": context.colors.halo,
+      "text-halo-color": context.colors.pavementMedium,
       "text-halo-width": 1
     }
   };

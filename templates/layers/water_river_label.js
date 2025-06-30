@@ -20,7 +20,7 @@ module.exports.default = (context) => {
     },
     "paint": {
       "text-color": context.colors.waterLabel,
-      "text-halo-color": context.colors.water_light,
+      "text-halo-color": context.colors.waterZoomedIn,
       "text-halo-width": 1.5,
       "text-halo-blur": 0.5
     }
