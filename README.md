@@ -91,7 +91,7 @@ Note this terrain data is likely from 2008 or before, and at current writing the
 
 ### Landcover, Roads, Labels, etc.
 
-Everything else originally came from [Protomaps](https://docs.protomaps.com). The Protomaps tile data is saved as `muddy_branch_area.pmtiles`. The [original Protomaps stylesheet](https://github.com/protomaps/basemaps/tree/main/styles) has been replaced with a custom one designed for this project. To make changes:
+Everything else originally came from [Protomaps](https://docs.protomaps.com). The Protomaps tile data is saved as `muddy_branch_reference_data.pmtiles` [here](assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_reference_data.pmtiles). The [original Protomaps stylesheet](https://github.com/protomaps/basemaps/tree/main/styles) has been replaced with a custom one designed for this project. To make changes:
 1. Install [Map GL Style Build](https://github.com/stamen/map-gl-style-build) in a local clone of this repo
 2. Modify the [layer](templates/layers) you want to change according to the [Maplibre Style Specification](https://maplibre.org/maplibre-gl-js/docs/style-spec/)
 3. Build the `style.json` file [here](assets/Muddy_Branch_Greenway_Trail_Map/style.json) by running the Map GL Style Build `build` command.
