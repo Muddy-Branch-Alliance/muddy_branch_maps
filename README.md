@@ -1,10 +1,7 @@
 
-Welcome! This repo contains a redesigned web map of the [Muddy Branch Greenway Trail](https://muddybranch.org/maps/), suitable for embedding in an iFrame or wherever you might need a digital map. The map is rendered by [Maplibre GL JS](https://maplibre.org/maplibre-gl-js/docs/). There are no additional external requirements or dependencies.
+Welcome! This repo contains a redesigned web map of the [Muddy Branch Greenway Trail](https://muddybranch.org/trail/), now live on the website of the Muddy Branch Alliance. The map is rendered by [Maplibre GL JS](https://maplibre.org/maplibre-gl-js/docs/). All components needed to display it are contained within this repo. There are no additional external requirements or dependencies.
 
 ![Map Preview](Muddy_Branch_Greenway_Trail_Map.png)
-
-- Click [here](https://mizmay.github.io/muddy_branch_maps/) for an interactive version of the map.
-- Click [here](https://mizmay.github.io/muddy_branch_maps/muddy_branch_trail.html) for a preview of how this map is intended to look when embedded in the Muddy Branch Alliance website.
 
 Here is a brief explanation of all of the underlying components this map relies on to render and display an intereactive map.
 
@@ -13,6 +10,7 @@ Here is a brief explanation of all of the underlying components this map relies 
 If you are interested in deploying (or modifying) this map from your own account:
 
 1. [Fork this repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) to your Github account
+2. Set up a local web server and make any changes to the underlying data, styles, icons, etc.
 3. [Enable Github Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site) in the new location
 4. Search and replace any hard-coded references to the original Github Pages hosting site (e.g. https://mizmay.github.io/) with the new domain
 
@@ -55,22 +53,8 @@ out body;
 
 ### Replacing the data in this Repo
 
-1. ( Optional / Recommended ) Verify the updates in the GeoJSON make sense compared with `muddy_branch_relation.geojson`.
-2. Replace `muddy_branch_relation.geojson` with the file you just downloaded.
-
-## Icons and Fonts
-
-All the map icons and text labels are rendered from assets in this repo. Instructions for how to access or modify these below.
-
-The original Protomaps assets were helpful in defining what to implement and how, documented [here](https://github.com/protomaps/basemaps-assets?tab=readme-ov-file).
-
-### Icons
-
-Icons are [custom SVGs](./assets/icons) created for this project and transformed to [sprites](https://github.com/mizmay/muddy_branch_maps/tree/main/assets/sprites) that match the Maplibre GL spec using a command-line tool called [Spreet](https://github.com/flother/spreet). Note, both the JSON and PNG are required by the renderer.
-
-### Fonts
-
-The map currently uses [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) for all text labels, accessed from [here](./assets/fonts). You can switch to any [Maplibre GL compatible font](https://github.com/maplibre/font-maker) by updating the `text-font` declarations [throughout the stylesheet](./assets/Muddy_Branch_Greenway_Trail_Map/style.json) and the stylesheet `glyph` [location](./assets/Muddy_Branch_Greenway_Trail_Map/style.json#L27) (if stored somewhere else). 
+1. ( Optional / Recommended ) Verify the updates in the GeoJSON make sense compared with [`muddy_branch_greenway_trail_relation.geojson`](assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_greenway_trail_relation.geojson).
+2. Replace `muddy_branch_greenway_trail_relation.geojson` with the file you just downloaded.
 
 ## Reference Layers
 
@@ -97,17 +81,37 @@ Note this terrain data is likely from 2008 or before, and at current writing the
 
 ### Landcover, Roads, Labels, etc.
 
-Everything else originally came from [Protomaps](https://docs.protomaps.com). The Protomaps tile data is saved as `muddy_branch_reference_data.pmtiles` [here](assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_reference_data.pmtiles). The [original Protomaps stylesheet](https://github.com/protomaps/basemaps/tree/main/styles) has been replaced with a custom one designed for this project. To make changes:
-1. Install [Map GL Style Build](https://github.com/stamen/map-gl-style-build) in a local clone of this repo
-2. Modify the [layer](templates/layers) you want to change according to the [Maplibre Style Specification](https://maplibre.org/maplibre-gl-js/docs/style-spec/)
-3. Build the `style.json` file [here](assets/Muddy_Branch_Greenway_Trail_Map/style.json) by running the Map GL Style Build `build` command.
+Everything else came from [Protomaps](https://docs.protomaps.com). The Protomaps tile data extract is saved as `muddy_branch_reference_data.pmtiles` [here](assets/Muddy_Branch_Greenway_Trail_Map/muddy_branch_reference_data.pmtiles). It is comprised primarily of OpenStreetMap data but optimized to be performant for web maps.
 
-Should the data in these layers ever become out-of-date and you need a more recent version, here's how to download and replace these layers:
+The global Protomaps tiles are updated nightly. Should the data in these layers ever become out-of-date and you need a more recent version, here's how to download and replace these layers:
 1. Follow the [Getting Started](https://docs.protomaps.com/guide/getting-started) guide to install the CLI (if you haven't already) and find the latest daily planet file
 2. Paste this at the command line, replacing <LATEST_PLANET_FILE> with the name of the latest daily planet file:
 ```
 pmtiles extract https://build.protomaps.com/<LATEST_PLANET_FILE>.pmtiles muddy_branch_area.pmtiles --minzoom=10 --maxzoom=16 --bbox=-77.574463,38.934310,-76.956482,39.254056
 ```
 3. Replace the existing file in this repo with the updated file.
+
+## Other Assets
+
+Map controls and interactivity elements such as pop-ups are [defined here](index.html) and controlled by [Maplibre GL GS](https://maplibre.org/maplibre-gl-js/docs/). All the layers, map icons and text labels are rendered from assets in this repo based on instructions in the stylesheet. Instructions for how to access or modify these below.
+
+THe [original Protomaps assets](https://github.com/protomaps/basemaps-assets?tab=readme-ov-file] were used as a guide for what to implement and how.
+
+### Styles
+
+The [original Protomaps stylesheet](https://github.com/protomaps/basemaps/tree/main/styles) has been replaced with a custom one designed for this project. To make changes:
+1. Install [Map GL Style Build](https://github.com/stamen/map-gl-style-build) in a local clone of this repo
+2. Modify the [layer](templates/layers) you want to change according to the [Maplibre Style Specification](https://maplibre.org/maplibre-gl-js/docs/style-spec/)
+3. Build the `style.json` file [here](assets/Muddy_Branch_Greenway_Trail_Map/style.json) by running the Map GL Style Build `build` command.
+
+
+### Icons
+
+Icons are [custom SVGs](./assets/icons) created for this project and transformed to [sprites](https://github.com/mizmay/muddy_branch_maps/tree/main/assets/sprites) that match the Maplibre GL spec using a command-line tool called [Spreet](https://github.com/flother/spreet). Note, both the JSON and PNG are required by the renderer.
+
+### Fonts
+
+The map currently uses [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) for all text labels, accessed from [here](./assets/fonts). You can switch to any [Maplibre GL compatible font](https://github.com/maplibre/font-maker) by updating the `text-font` declarations [throughout the stylesheet](./assets/Muddy_Branch_Greenway_Trail_Map/style.json) and the stylesheet `glyph` [location](./assets/Muddy_Branch_Greenway_Trail_Map/style.json#L27) (if stored somewhere else). 
+
 
 
