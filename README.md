@@ -1,10 +1,7 @@
 
-Welcome! This repo contains a redesigned web map of the [Muddy Branch Greenway Trail](https://muddybranch.org/maps/), suitable for embedding in an iFrame or wherever you might need a digital map. The map is rendered by [Maplibre GL JS](https://maplibre.org/maplibre-gl-js/docs/). All components needed to display it are contained within this repo. There are no additional external requirements or dependencies.
+Welcome! This repo contains a redesigned web map of the [Muddy Branch Greenway Trail](https://muddybranch.org/trail/), now live on the website of the Muddy Branch Alliance. The map is rendered by [Maplibre GL JS](https://maplibre.org/maplibre-gl-js/docs/). All components needed to display it are contained within this repo. There are no additional external requirements or dependencies.
 
 ![Map Preview](Muddy_Branch_Greenway_Trail_Map.png)
-
-- Click [here](https://mizmay.github.io/muddy_branch_maps/) for an interactive version of the map.
-- Click [here](https://mizmay.github.io/muddy_branch_maps/muddy_branch_trail.html) for a preview of how this map is intended to look when embedded in the Muddy Branch Alliance website.
 
 Here is a brief explanation of all of the underlying components this map relies on to render and display an intereactive map.
 
@@ -13,6 +10,7 @@ Here is a brief explanation of all of the underlying components this map relies 
 If you are interested in deploying (or modifying) this map from your own account:
 
 1. [Fork this repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) to your Github account
+2. Set up a local web server and make any changes to the underlying data, styles, icons, etc.
 3. [Enable Github Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site) in the new location
 4. Search and replace any hard-coded references to the original Github Pages hosting site (e.g. https://mizmay.github.io/) with the new domain
 
